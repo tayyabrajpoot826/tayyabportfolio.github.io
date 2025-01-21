@@ -1,0 +1,480 @@
+
+.parent-secaboutus button.bafbtn {
+  cursor: pointer;
+    height: 48px;
+    width: 280px;
+    margin-top: 10px;
+    background-color: #dbddec;
+    font-family: Oxygen;
+    color: #2b3d95;
+    font-size: 20px;
+    font-weight: 700;
+    border-color: transparent;
+}
+.parent-secaboutus button.bafbtn:hover {
+  background-color:black;
+color:white;}
+.parent-secaboutus .parent-repair button.bafbtn {
+    width: 314px;}
+.parent-secaboutus .data-envision button.bafbtn {
+    width: 305px;}
+.parent-secaboutus .container {
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+
+.parent-secaboutus section.sec-aboutheader {
+    height: 461px;
+}
+.parent-secaboutus .parent-datandman {
+    display: flex;
+}
+.parent-secaboutus .parent-datandman .img-man{    width: 56%;}
+.parent-secaboutus .parent-datandman  data-abm{    width: 44%;}
+.parent-secaboutus .parent-datandman  .new-wrap{    width: 545px;}
+.parent-secaboutus .data-abm {
+    width:44%;
+}
+.parent-secaboutus .data-abm h1 {
+  line-height: 75px;
+  margin:160px 0 0 0;
+  font-size:70px;
+  font-weight:700;
+   font-family: "Oxygen", serif;
+    color: white;
+}
+.parent-secaboutus .data-abm h6 {
+  margin:15px 0 0 0;
+  line-height: 30px;
+  font-size:24px;
+  font-weight:400;
+   font-family: "Oxygen", serif;
+    color: white;
+}
+
+
+
+.parent-secaboutus section.sec-beginning {
+    padding-top: 100px;
+}
+.parent-secaboutus .data-beginning {
+    text-align: center;
+}
+.parent-secaboutus .data-beginning h1 {
+  font-family: 'Oxygen';
+    color: #2B3D95;
+    font-size: 40px;
+    font-weight: 700;
+}
+.parent-secaboutus .data-beginning p {
+  margin: 0 auto;
+    width: 828px;
+    font-family: 'Oxygen';
+    font-size: 20px;
+    font-weight: 400;
+    color: black;
+  line-height:25px;
+}
+
+
+
+.parent-secaboutus section.sec-helmets {
+    padding-top: 80px;
+}
+.parent-secaboutus .imges-helmet {
+    justify-content: center;
+    display: flex;
+    gap: 30px;
+}
+
+
+
+.parent-secaboutus section.sec-whatdo {
+    padding-top: 100px;
+}
+.parent-secaboutus .parent-what {
+    margin: 0px 20px;
+    border: 2px solid lightgray;
+    display: flex;
+}
+.parent-secaboutus .data-what { 
+  width: 51%;
+  padding: 60px 0px 0px 80px; }
+
+.parent-secaboutus .data-what h1 {
+    color: #2B3D95;
+    font-size: 40px;
+    font-weight: 700;
+    font-family: 'Oxygen';
+}
+.parent-secaboutus .data-what p {
+  width: 555px;
+   margin: 0 0 10px 0px;
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 400;
+    color: #000;
+}
+img.img-desktop {
+    display: block;
+}
+img.img-responsive {
+    display: none;
+}
+.helmet-what {
+    display: flex;
+}
+
+
+
+
+.parent-secaboutus .parent-repair {
+    padding-top: 50px;
+}
+.parent-secaboutus .data-repair {
+    text-align: center;
+}
+.parent-secaboutus .data-repair h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #2B3D95;
+    font-family: 'Oxygen';
+}
+.parent-secaboutus .data-repair p {
+    color: black;
+    font-family: Oxygen;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+  margin: 0 auto;
+    width: 830px;
+  padding-bottom: 15px;
+}
+
+
+.parent-secaboutus section.sec-impossible {
+    margin: 100px 20px;
+    background-size: cover;
+    height: 114px;
+}
+.parent-secaboutus .data-impoosible {
+    padding: 20px;
+    text-align: center;
+}
+.parent-secaboutus .data-impoosible h1 {
+  font-weight:700;
+    font-family: 'Oxygen';
+    font-size: 24px;
+    color: white;
+}
+
+
+.parent-secaboutus .parent-envision {
+    margin: 0 20px;
+    border: 2px solid lightgray;
+    display: flex;
+}
+.parent-secaboutus .img-envision {
+  display:flex;
+    width: 50%;
+}
+.parent-secaboutus .data-envision {
+    padding: 40px 0px;
+}
+.parent-secaboutus .data-envision h1 {
+    font-family: 'Oxygen';
+    font-size: 40px;
+    font-weight: 700;
+    color: #2B3D95;
+}
+.parent-secaboutus .data-envision p {
+  width: 610px;
+    color: black;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Oxygen';
+  line-height: 25px;
+}
+img.img-first {
+    display: block;
+}
+img.img-second {
+    display: none;
+}
+
+
+
+.parent-secaboutus section.sec-bestway {
+    margin: 100px 20px;
+    background-size: cover;
+    height: 114px;
+}
+.parent-secaboutus .data-bestway {
+    padding: 20px;
+    text-align: center;
+}
+.parent-secaboutus .data-bestway h1 {
+  font-weight:700;
+    font-family: 'Oxygen';
+    font-size: 24px;
+    color: white;
+}
+
+@media(max-width:1400px){
+
+  .parent-secaboutus section.sec-aboutheader {
+    height: auto;
+}
+ .parent-secaboutus .parent-datandman .img-man {
+        margin: 0 0 -70px 0;
+        width: 60%;
+    }
+  img.img-fluid {
+    width: 100%;
+}
+  .parent-secaboutus .data-abm {
+    width: 40%;
+}
+  .parent-secaboutus .parent-datandman .new-wrap {
+    width: auto;
+}
+  .parent-secaboutus .data-abm h1 {
+    line-height: 55px;
+    margin: 60px 0 0;
+    font-size: 50px;
+  }
+  .parent-secaboutus .data-abm h6 {
+    margin: 15px 0 0;
+    line-height: 30px;
+    font-size: 17px;
+}
+  .parent-secaboutus .imges-helmet {
+    margin: 0 20px;
+    gap: 15px;
+}
+  .parent-secaboutus .data-what {
+    width: 51%;
+    padding: 20px 0 20px 20px;
+}
+  img.img-desktop {
+    width: 100%;
+}
+     .parent-secaboutus .data-envision {
+        padding: 45px 10px 30px 10px;
+    }
+  img.img-first {
+    width: 100%;
+}
+
+  
+}
+
+
+
+
+
+ @media(max-width:1025px){
+
+       .parent-secaboutus section.sec-aboutheader {
+        width: fit-content;
+        height: auto;
+    }
+  .parent-secaboutus .parent-datandman {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    }
+
+  .parent-secaboutus .parent-datandman .img-man {
+        margin: 40px 40px -90px 0;
+        width: auto;
+    }
+ img.img-fluid{
+     width:100%;
+   }
+.parent-secaboutus .data-abm {
+    width: 100%;
+    text-align: center;
+}
+   .parent-secaboutus .parent-datandman .new-wrap {
+    width: 100%;
+}
+   .parent-secaboutus .data-abm h1 {
+    line-height: 40px;
+        margin: 30px 0 0;
+        font-size: 35px;
+        font-weight: 700;
+}
+   .parent-secaboutus .data-abm h6 {
+    margin: 15px 0 0;
+        line-height: 20px;
+        font-size: 15px;
+        font-weight: 400;
+}
+.parent-secaboutus .data-beginning h1 {
+   font-size: 26px;
+}
+.parent-secaboutus .data-beginning p {
+ margin: 0 20px;
+     width: auto;
+    font-size: 15px;
+    line-height: 25px;
+}
+   .parent-helmets {
+    margin: 0 10px;
+}
+   .parent-secaboutus .imges-helmet {
+    gap: 10px;
+}
+   .parent-secaboutus .data-repair h1 {
+   font-size: 25px;
+}
+   .parent-secaboutus .data-repair p {
+    margin: 0 20px;
+        width: auto;
+        font-size: 15px;
+        line-height: 25px;
+}
+.parent-secaboutus .parent-repair button.bafbtn {
+    width: 173px;
+}
+   .parent-secaboutus button.bafbtn {
+    height: 27px;
+    font-size: 10px;
+   }
+.parent-secaboutus section.sec-impossible {
+    margin: 40px 0px;
+    height: 38px;
+}
+   .parent-secaboutus .data-impoosible {
+    padding: 3px;
+}
+.parent-secaboutus .data-impoosible h1 {
+    font-size: 10px;
+}
+   .parent-secaboutus section.sec-bestway {
+    margin: 100px 0px;
+    height: 38px;
+}
+.parent-secaboutus .data-bestway {
+    padding: 3px;
+}
+.parent-secaboutus .data-bestway h1 {
+    font-size: 10px;
+}
+   .parent-secaboutus .parent-what {
+    margin: 0 10px;
+    display: block;
+}
+   .parent-secaboutus .data-what {
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
+}
+   img.img-desktop {
+    display: none;
+}
+   img.img-responsive {
+    display: block;
+     width: 100%;
+}
+.parent-secaboutus .data-what button.bafbtn {
+width: 154px;
+ }
+  .parent-secaboutus .data-what h1 {
+        font-size: 26px;
+    }
+   .parent-secaboutus .data-what p {
+    padding-bottom: 5px;
+        margin: 0 20px;
+        width: auto;
+        font-size: 15px;
+        line-height: 25px;
+}
+   img.img-first {
+    display: none;
+}
+   img.img-second {
+    display: block;
+     width: 100%;
+}
+   .parent-secaboutus .parent-envision {
+    flex-wrap: wrap-reverse;
+     margin: 0 10px;
+}
+   .parent-secaboutus .data-envision {
+     width: 100%;
+    text-align: center;
+}
+   .parent-secaboutus .data-envision h1 {
+    font-size: 25px;
+}
+   .parent-secaboutus .data-envision p {
+   width: auto;
+        margin: 0 20px;
+        text-align: center;
+        font-size: 15px;
+        line-height: 25px;
+}
+   .parent-secaboutus .img-envision {
+    width: 100%;
+}
+   .parent-secaboutus .data-envision button.bafbtn {
+    width: 167px;
+}
+   .parent-secaboutus section.sec-whatdo {
+    padding-top: 50px;
+}
+   .parent-secaboutus .parent-repair {
+    padding-top: 30px;
+}
+   .parent-secaboutus .data-envision {
+    padding: 20px 0;
+}
+.parent-secaboutus section.sec-bestway {
+margin: 40px 0;
+    }
+ }
+@media(max-width:600px){
+
+      .parent-secaboutus .data-abm h1 {
+        line-height: 32px;
+        font-size: 30px;
+    }
+      .parent-secaboutus .data-abm h6 {
+        line-height: 15px;
+        font-size: 10px;
+    }
+  .parent-secaboutus .data-beginning h1 {
+        font-size: 18px;
+    }
+   .parent-secaboutus .data-beginning p {
+        font-size: 10px;
+        line-height:15px;
+    }
+      .parent-secaboutus .data-what h1 {
+        font-size: 18px;
+    }
+      .parent-secaboutus .data-what p {
+        font-size: 10px;
+        line-height: 12px;
+    }
+  .parent-secaboutus .data-repair h1 {
+        font-size: 18px;
+    }
+      .parent-secaboutus .data-repair p {
+        font-size: 10px;
+        line-height: 12px;
+    }
+      .parent-secaboutus .data-envision h1 {
+        font-size: 18px;
+    }
+      .parent-secaboutus .data-envision p {
+        padding-bottom: 5px;
+        font-size: 10px;
+        line-height: 12px;
+    }
+  .parent-secaboutus section.sec-helmets {
+    padding-top: 40px;
+}
+}
