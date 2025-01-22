@@ -3,91 +3,105 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio of John Doe, a web developer and designer.">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Tayyab's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <header>
+  <header id="home">
     <nav>
       <div class="logo">Tayyab</div>
       <ul>
+        <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+    <section class="intro">
+      <h1>Hello, I'm Tayyab</h1>
+      <p>Shopify & WordPress Web Developer</p>
+      <a href="#contact" class="btn">Hire Me</a>
+    </section>
   </header>
 
-  <section id="hero">
-    <div class="hero-content">
-      <h1>Hi, I'm Tayyab Rajpoot</h1>
-      <p>A Passionate Web Developer</p>
-      <a href="#about" class="btn">Learn More</a>
-    </div>
-  </section>
-
   <section id="about" class="section">
-    <div class="section-title">
+    <div class="content">
       <h2>About Me</h2>
+      <p>Passionate web developer with expertise in Shopify & WordPress. Creating intuitive, user-friendly websites that help businesses grow online.</p>
     </div>
-    <p>I'm a web developer with experience in front-end and back-end technologies. I love creating dynamic, user-friendly websites and applications. My passion for coding started early, and it continues to grow with each project I take on.</p>
   </section>
 
   <section id="skills" class="section">
-    <div class="section-title">
+    <div class="content">
       <h2>Skills</h2>
-    </div>
-    <div class="skills-container">
-      <div class="skill-item">HTML</div>
-      <div class="skill-item">CSS</div>
-      <div class="skill-item">JavaScript</div>
-      <div class="skill-item">Bootstrap</div>
-      <div class="skill-item">Shopify Developer</div>
-      <div class="skill-item">Wordpress Developer</div>
+      <div class="skills">
+        <div class="skill">
+          <h3>HTML & CSS</h3>
+          <div class="progress-bar">
+            <div class="progress" style="width: 95%"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <h3>JavaScript</h3>
+          <div class="progress-bar">
+            <div class="progress" style="width: 90%"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <h3>Shopify</h3>
+          <div class="progress-bar">
+            <div class="progress" style="width: 85%"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <h3>WordPress</h3>
+          <div class="progress-bar">
+            <div class="progress" style="width: 80%"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <section id="projects" class="section">
-    <div class="section-title">
+    <div class="content">
       <h2>Projects</h2>
-    </div>
-    <div class="projects-container">
-      <div class="project-card">
-        <img src="https://via.placeholder.com/300x200" alt="Project 1">
-        <h3>Project 1</h3>
-        <p>A web application built with React and Node.js.</p>
-      </div>
-      <div class="project-card">
-        <img src="https://via.placeholder.com/300x200" alt="Project 2">
-        <h3>Project 2</h3>
-        <p>A responsive e-commerce website using HTML, CSS, and JavaScript.</p>
-      </div>
-      <div class="project-card">
-        <img src="https://via.placeholder.com/300x200" alt="Project 3">
-        <h3>Project 3</h3>
-        <p>A portfolio website designed and developed using HTML and CSS.</p>
+      <div class="project-cards">
+        <!-- Add Your Project Details Here -->
+        <div class="project-card">
+          <img src="https://via.placeholder.com/300" alt="Project 1">
+          <h3>Project 1</h3>
+          <p>A custom Shopify store development.</p>
+        </div>
+        <div class="project-card">
+          <img src="https://via.placeholder.com/300" alt="Project 2">
+          <h3>Project 2</h3>
+          <p>Building a responsive WordPress site for a client.</p>
+        </div>
+        <!-- More project cards as needed -->
       </div>
     </div>
   </section>
 
   <section id="contact" class="section">
-    <div class="section-title">
-      <h2>Contact</h2>
+    <div class="content">
+      <h2>Contact Me</h2>
+      <p>If you want to discuss a project or hire me, feel free to reach out!</p>
+      <form id="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
     </div>
-    <form action="#">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
-    </form>
   </section>
 
   <footer>
-    <p>&copy; 2025 Copyright. All rights reserved.</p>
+    <p>&copy; 2025 Tayyab. All Rights Reserved.</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
