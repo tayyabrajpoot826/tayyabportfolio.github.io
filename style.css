@@ -1,17 +1,5 @@
 <style>
 
-button.bafbtn {
-  cursor: pointer;
-    height: 48px;
-    width: 280px;
-    margin-top: 10px;
-    background-color: #dbddec;
-    font-family: Oxygen;
-    color: #2b3d95;
-    font-size: 20px;
-    font-weight: 700;
-    border-color: transparent;
-}
 .parent-secaboutus button.bafbtn:hover {
   background-color:black;
 color:white;}
@@ -478,5 +466,18 @@ margin: 40px 0;
   .parent-secaboutus section.sec-helmets {
     padding-top: 40px;
 }
+}
+
+button.bafbtn {
+  cursor: pointer;
+    height: 48px;
+    width: 280px;
+    margin-top: 10px;
+    background-color: #dbddec;
+    font-family: Oxygen;
+    color: #2b3d95;
+    font-size: 20px;
+    font-weight: 700;
+    border-color: transparent;
 }
 </style>
