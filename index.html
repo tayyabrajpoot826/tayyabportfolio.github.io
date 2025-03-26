@@ -1,107 +1,881 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Tayyab's Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaquille Williams | AI Engineer & Community Builder</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header id="home">
-    <nav>
-      <div class="logo">Tayyab</div>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <section class="intro">
-      <h1>Hello, I'm Tayyab</h1>
-      <p>Shopify & WordPress Web Developer</p>
-      <a href="#contact" class="btn">Hire Me</a>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-text">SW</div>
+                    <div class="logo-details">
+                        <div class="logo-name">Shaquille Williams</div>
+                        <div class="logo-title">AI Engineer & Community Builder</div>
+                    </div>
+                </div>
+                <nav class="nav-desktop">
+                    <ul>
+                        <li><a href="#" class="nav-link">Home</a></li>
+                        <li><a href="#skills" class="nav-link">Skills</a></li>
+                        <li><a href="#experience" class="nav-link">Experience</a></li>
+                        <li><a href="#projects" class="nav-link">Projects</a></li>
+                        <li><a href="#publications" class="nav-link">Publications</a></li>
+                        <li><a href="#education" class="nav-link">Education</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="mobile-menu">
+            <ul>
+                <li><a href="#" class="mobile-nav-link">Home</a></li>
+                <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+                <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
+                <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+                <li><a href="#publications" class="mobile-nav-link">Publications</a></li>
+                <li><a href="#education" class="mobile-nav-link">Education</a></li>
+                <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="badge">Senior Software Engineer</div>
+                    <h1 class="hero-title">Shaquille Williams</h1>
+                    <p class="hero-description" id="typed-text"></p>
+                    <div class="hero-tags">
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">Generative AI</span>
+                        <span class="tag">Computer Vision</span>
+                        <span class="tag">NLP</span>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            View Projects
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            Contact Me
+                        </a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:shaq.williams.ai@gmail.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="profile-image">
+                        <img src="https://via.placeholder.com/400" alt="Shaquille Williams">
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <a href="#about">
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+            </div>
+        </div>
     </section>
-  </header>
 
-  <section id="about" class="section">
-    <div class="content">
-      <h2>About Me</h2>
-      <p>Passionate web developer with expertise in Shopify & WordPress. Creating intuitive, user-friendly websites that help businesses grow online.</p>
-    </div>
-  </section>
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Get to know more about my background, expertise, and what drives me to create impactful AI solutions.</p>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://via.placeholder.com/600x800" alt="Shaquille Williams">
+                    <div class="stats-card">
+                        <div class="stats-icon"><i class="fas fa-award"></i></div>
+                        <div class="stats-info">
+                            <div class="stats-label">Experience</div>
+                            <div class="stats-value">5+ Years</div>
+                        </div>
+                    </div>
+                    <div class="stats-card stats-card-alt">
+                        <div class="stats-icon"><i class="fas fa-briefcase"></i></div>
+                        <div class="stats-info">
+                            <div class="stats-label">Projects</div>
+                            <div class="stats-value">20+</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>Senior Software Engineer & AI Specialist</h3>
+                    <p>I'm an innovative Senior Software Engineer, AI Specialist, and Community Organizer with expertise in machine learning, generative AI, cybersecurity, and STEM education. With a background in physics and a deep understanding of computational methods, I specialize in developing AI-driven, open-source tools for impactful, equitable social change.</p>
+                    <p>My work spans from developing cutting-edge voice cloning technology to creating community-focused programs that have positively impacted over 20,000 NYC residents. I'm dedicated to creating systems that support activist networks, educational platforms, and community-building initiatives while addressing systemic challenges through socially responsible technology.</p>
+                    <div class="about-tags">
+                        <span class="tag tag-blue"><i class="fas fa-briefcase"></i> Technical Leadership</span>
+                        <span class="tag tag-purple"><i class="fas fa-graduation-cap"></i> STEM Education</span>
+                        <span class="tag tag-green"><i class="fas fa-heart"></i> Community Building</span>
+                    </div>
+                    <div class="about-buttons">
+                        <a href="#" class="btn btn-primary">
+                            <i class="fas fa-download"></i>
+                            Download Resume
+                        </a>
+                        <a href="https://www.linkedin.com/in/shaquille-williams-957970129" target="_blank" class="btn btn-outline">
+                            View LinkedIn
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section id="skills" class="section">
-    <div class="content">
-      <h2>Skills</h2>
-      <div class="skills">
-        <div class="skill">
-          <h3>HTML & CSS</h3>
-          <div class="progress-bar">
-            <div class="progress" style="width: 95%"></div>
-          </div>
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technical Skills</h2>
+                <p class="section-subtitle">A comprehensive overview of my technical expertise across various domains, from machine learning and AI to software development and research.</p>
+            </div>
+            <div class="skills-filter">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="skills-search" placeholder="Search skills...">
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="expert">Expert</button>
+                    <button class="filter-btn" data-filter="advanced">Advanced</button>
+                    <button class="filter-btn" data-filter="intermediate">Intermediate</button>
+                </div>
+            </div>
+            <div class="skills-grid">
+                <!-- Machine Learning & AI -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-laptop"></i>
+                        <h3>Machine Learning & AI</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag expert">Deep Learning</span>
+                        <span class="skill-tag expert">NLP</span>
+                        <span class="skill-tag advanced">Computer Vision</span>
+                        <span class="skill-tag advanced">Reinforcement Learning</span>
+                        <span class="skill-tag intermediate">MLOps</span>
+                        <span class="skill-tag advanced">Generative AI</span>
+                        <span class="skill-tag advanced">Voice Cloning</span>
+                    </div>
+                </div>
+                
+                <!-- Programming & Development -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Programming & Development</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag expert">Python</span>
+                        <span class="skill-tag expert">JavaScript/TypeScript</span>
+                        <span class="skill-tag advanced">C++</span>
+                        <span class="skill-tag advanced">SQL</span>
+                        <span class="skill-tag intermediate">R</span>
+                        <span class="skill-tag intermediate">MATLAB</span>
+                    </div>
+                </div>
+                
+                <!-- AI Frameworks & Tools -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-microchip"></i>
+                        <h3>AI Frameworks & Tools</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag expert">PyTorch</span>
+                        <span class="skill-tag expert">TensorFlow</span>
+                        <span class="skill-tag expert">Scikit-learn</span>
+                        <span class="skill-tag advanced">Hugging Face</span>
+                        <span class="skill-tag advanced">CUDA</span>
+                        <span class="skill-tag intermediate">TensorRT</span>
+                    </div>
+                </div>
+                
+                <!-- Data Science & Analytics -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-database"></i>
+                        <h3>Data Science & Analytics</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag advanced">Data Mining</span>
+                        <span class="skill-tag intermediate">Business Intelligence</span>
+                        <span class="skill-tag advanced">Big Data Processing</span>
+                        <span class="skill-tag expert">Pandas</span>
+                        <span class="skill-tag intermediate">Tableau</span>
+                        <span class="skill-tag advanced">Data Visualization</span>
+                    </div>
+                </div>
+                
+                <!-- Cloud & Infrastructure -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-cloud"></i>
+                        <h3>Cloud & Infrastructure</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag advanced">AWS</span>
+                        <span class="skill-tag advanced">GCP</span>
+                        <span class="skill-tag expert">Docker</span>
+                        <span class="skill-tag advanced">Kubernetes</span>
+                        <span class="skill-tag intermediate">CI/CD</span>
+                        <span class="skill-tag intermediate">Microservices</span>
+                    </div>
+                </div>
+                
+                <!-- Research & Analysis -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-book-open"></i>
+                        <h3>Research & Analysis</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag advanced">Grant Writing</span>
+                        <span class="skill-tag advanced">Peer Review</span>
+                        <span class="skill-tag expert">Research Methods</span>
+                        <span class="skill-tag advanced">Experimental Design</span>
+                        <span class="skill-tag expert">Scientific Writing</span>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-legend">
+                <div class="legend-item">
+                    <div class="legend-color expert"></div>
+                    <span>Expert (4+ years)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color advanced"></div>
+                    <span>Advanced (2-4 years)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color intermediate"></div>
+                    <span>Intermediate (1-2 years)</span>
+                </div>
+            </div>
         </div>
-        <div class="skill">
-          <h3>JavaScript</h3>
-          <div class="progress-bar">
-            <div class="progress" style="width: 90%"></div>
-          </div>
-        </div>
-        <div class="skill">
-          <h3>Shopify</h3>
-          <div class="progress-bar">
-            <div class="progress" style="width: 85%"></div>
-          </div>
-        </div>
-        <div class="skill">
-          <h3>WordPress</h3>
-          <div class="progress-bar">
-            <div class="progress" style="width: 80%"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="projects" class="section">
-    <div class="content">
-      <h2>Projects</h2>
-      <div class="project-cards">
-        <!-- Add Your Project Details Here -->
-        <div class="project-card">
-          <img src="https://via.placeholder.com/300" alt="Project 1">
-          <h3>Project 1</h3>
-          <p>A custom Shopify store development.</p>
-        </div>
-        <div class="project-card">
-          <img src="https://via.placeholder.com/300" alt="Project 2">
-          <h3>Project 2</h3>
-          <p>Building a responsive WordPress site for a client.</p>
-        </div>
-        <!-- More project cards as needed -->
-      </div>
-    </div>
-  </section>
+    <!-- Experience Section -->
+    <section id="experience" class="experience section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Professional Journey</h2>
+                <p class="section-subtitle">My professional experiences and career highlights in AI development, education, and community building.</p>
+            </div>
+            <div class="experience-timeline">
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3 class="experience-title">Technical Program Director</h3>
+                        <div class="experience-badge">Work Experience</div>
+                    </div>
+                    <div class="experience-details">
+                        <div class="experience-company">
+                            <i class="fas fa-building"></i>
+                            <span>Rose from Concrete</span>
+                        </div>
+                        <div class="experience-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Brooklyn, NY</span>
+                        </div>
+                        <div class="experience-period">
+                            <i class="fas fa-calendar"></i>
+                            <span>January 2021 - Present</span>
+                        </div>
+                    </div>
+                    <p class="experience-description">
+                        Leading technical initiatives and community programs across Brooklyn, developing and implementing ML models for assessing program impact and reach.
+                    </p>
+                    <div class="experience-expand">
+                        <button class="expand-btn" data-target="exp-1">
+                            <span>View Details</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div id="exp-1" class="experience-content">
+                        <div class="content-grid">
+                            <div class="content-column">
+                                <h4><i class="fas fa-trophy"></i> Key Responsibilities</h4>
+                                <ul>
+                                    <li>Forged strategic partnerships with 40+ community centers across Brooklyn</li>
+                                    <li>Developed predictive models using Python and Scikit-learn impacting 20,000+ NYC residents</li>
+                                    <li>Led implementation of community-focused programs using AWS Lambda and Docker</li>
+                                    <li>Designed decentralized energy solutions and AI-powered monitoring tools</li>
+                                </ul>
+                                <div class="skills-applied">
+                                    <h4><i class="fas fa-users"></i> Skills Applied</h4>
+                                    <div class="tags">
+                                        <span class="tag">Python</span>
+                                        <span class="tag">Machine Learning</span>
+                                        <span class="tag">AWS</span>
+                                        <span class="tag">Docker</span>
+                                        <span class="tag">GCP</span>
+                                        <span class="tag">Community Development</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-column">
+                                <h4><i class="fas fa-bullseye"></i> Key Metrics & Achievements</h4>
+                                <div class="metrics-grid">
+                                    <div class="metric-card">
+                                        <div class="metric-value">40+</div>
+                                        <div class="metric-label">Community Centers</div>
+                                    </div>
+                                    <div class="metric-card">
+                                        <div class="metric-value">20,000+</div>
+                                        <div class="metric-label">Residents impacted</div>
+                                    </div>
+                                    <div class="metric-card">
+                                        <div class="metric-value">15</div>
+                                        <div class="metric-label">Team Size</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-  <section id="contact" class="section">
-    <div class="content">
-      <h2>Contact Me</h2>
-      <p>If you want to discuss a project or hire me, feel free to reach out!</p>
-      <form id="contact-form">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn">Send Message</button>
-      </form>
-    </div>
-  </section>
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3 class="experience-title">Lead AP Physics Teacher</h3>
+                        <div class="experience-badge">Work Experience</div>
+                    </div>
+                    <div class="experience-details">
+                        <div class="experience-company">
+                            <i class="fas fa-building"></i>
+                            <span>Success Academy High School of the Liberal Arts</span>
+                        </div>
+                        <div class="experience-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>New York, NY</span>
+                        </div>
+                        <div class="experience-period">
+                            <i class="fas fa-calendar"></i>
+                            <span>July 2019 - 2022</span>
+                        </div>
+                    </div>
+                    <p class="experience-description">
+                        Led physics education initiatives, applying data analysis to optimize teaching strategies for over 150 students while managing a team of 13 teachers.
+                    </p>
+                    <div class="experience-expand">
+                        <button class="expand-btn" data-target="exp-2">
+                            <span>View Details</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div id="exp-2" class="experience-content">
+                        <div class="content-grid">
+                            <div class="content-column">
+                                <h4><i class="fas fa-trophy"></i> Key Responsibilities</h4>
+                                <ul>
+                                    <li>Applied advanced data analysis and statistical techniques in Python, optimizing lesson plans for 150+ students</li>
+                                    <li>Awarded the 'Teacher Excellence Award' for exceptional instructional strategies</li>
+                                    <li>Led a team of 13 teachers, fostering a collaborative academic environment</li>
+                                    <li>Developed innovative curriculum materials that improved student engagement and performance metrics</li>
+                                </ul>
+                                <div class="skills-applied">
+                                    <h4><i class="fas fa-users"></i> Skills Applied</h4>
+                                    <div class="tags">
+                                        <span class="tag">Leadership</span>
+                                        <span class="tag">Data Analysis</span>
+                                        <span class="tag">Education</span>
+                                        <span class="tag">Team Management</span>
+                                        <span class="tag">Curriculum Development</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-column">
+                                <h4><i class="fas fa-bullseye"></i> Key Metrics & Achievements</h4>
+                                <div class="metrics-grid">
+                                    <div class="metric-card">
+                                        <div class="metric-value">150+</div>
+                                        <div class="metric-label">Students</div>
+                                    </div>
+                                    <div class="metric-card">
+                                        <div class="metric-value">13</div>
+                                        <div class="metric-label">Team Size</div>
+                                    </div>
+                                    <div class="metric-card">
+                                        <div class="metric-value">95%</div>
+                                        <div class="metric-label">Pass Rate</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 Tayyab. All Rights Reserved.</p>
-  </footer>
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Project Portfolio</h2>
+                <p class="section-subtitle">Explore my portfolio of AI, machine learning, and software development projects. Each project demonstrates different skills and technologies.</p>
+            </div>
+            
+            <div class="featured-project">
+                <h3 class="featured-heading"><i class="fas fa-star"></i> Featured Project</h3>
+                <div class="featured-card">
+                    <div class="featured-image">
+                        <img src="https://via.placeholder.com/600x400" alt="Voice Cloning & Audio Processing Suite">
+                    </div>
+                    <div class="featured-content">
+                        <div class="featured-badge">Featured Project</div>
+                        <h3 class="featured-title">Voice Cloning & Audio Processing Suite</h3>
+                        <p class="featured-description">
+                            Comprehensive audio processing system including real-time voice cloning, multilingual transcription, and speaker diarization.
+                        </p>
+                        <div class="featured-tags">
+                            <span class="tag">TensorFlow TTS</span>
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">Whisper</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">React</span>
+                        </div>
+                        <div class="featured-details">
+                            <div class="detail-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>Completed: 2023</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-users"></i>
+                                <span>Team Size: 3</span>
+                            </div>
+                            <div class="detail-item">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="featured-buttons">
+                            <a href="#" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                            <a href="#" class="btn btn-outline">
+                                <i class="fas fa-code"></i>
+                                View Details
+                            </a>
+                            <a href="https://github.com" target="_blank" class="btn btn-outline">
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="projects-filter">
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">All Projects</button>
+                    <button class="filter-tab" data-filter="ai"><i class="fas fa-microchip"></i> AI & ML</button>
+                    <button class="filter-tab" data-filter="audio"><i class="fas fa-volume-up"></i> Audio</button>
+                    <button class="filter-tab" data-filter="web"><i class="fas fa-globe"></i> Web Dev</button>
+                    <button class="filter-tab" data-filter="data"><i class="fas fa-database"></i> Data Science</button>
+                </div>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project Card 1 -->
+                <div class="project-card" data-category="ai">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400" alt="DALL-E 2 PyTorch Implementation">
+                        <div class="project-overlay">
+                            <button class="btn btn-light project-details-btn" data-project="1">View Details</button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <span class="project-category">AI & ML</span>
+                            <div class="project-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <h3 class="project-title">DALL-E 2 PyTorch Implementation</h3>
+                        <p class="project-description">Open-source implementation of OpenAI's DALL-E 2 image generation model using PyTorch.</p>
+                        <div class="project-tags">
+                            <span class="tag tag-sm">PyTorch</span>
+                            <span class="tag tag-sm">CUDA</span>
+                            <span class="tag tag-sm">Docker</span>
+                            <span class="tag tag-sm">+2 more</span>
+                        </div>
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>2023</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-users"></i>
+                                <span>Team: 2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project Card 2 -->
+                <div class="project-card" data-category="ai">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400" alt="Multi-Agent RL Environment">
+                        <div class="project-overlay">
+                            <button class="btn btn-light project-details-btn" data-project="2">View Details</button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <span class="project-category">AI & ML</span>
+                            <div class="project-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Multi-Agent RL Environment</h3>
+                        <p class="project-description">A flexible environment for training and evaluating multi-agent reinforcement learning algorithms.</p>
+                        <div class="project-tags">
+                            <span class="tag tag-sm">Python</span>
+                            <span class="tag tag-sm">TensorFlow</span>
+                            <span class="tag tag-sm">OpenAI Gym</span>
+                        </div>
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>2023</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-users"></i>
+                                <span>Team: 2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project Card 3 -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400" alt="Community Grant Management System">
+                        <div class="project-overlay">
+                            <button class="btn btn-light project-details-btn" data-project="3">View Details</button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <span class="project-category">Web Dev</span>
+                            <div class="project-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Community Grant Management System</h3>
+                        <p class="project-description">Web application for managing community grant applications, reviews, and distributions.</p>
+                        <div class="project-tags">
+                            <span class="tag tag-sm">Next.js</span>
+                            <span class="tag tag-sm">PostgreSQL</span>
+                            <span class="tag tag-sm">AWS</span>
+                        </div>
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>2022</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-users"></i>
+                                <span>Team: 2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project Modal -->
+            <div id="project-modal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 id="modal-title">Project Details</h3>
+                        <button class="modal-close">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-tabs">
+                            <button class="modal-tab active" data-tab="overview">Overview</button>
+                            <button class="modal-tab" data-tab="details">Details</button>
+                            <button class="modal-tab" data-tab="gallery">Gallery</button>
+                        </div>
+                        <div id="tab-overview" class="tab-content active">
+                            <div class="tab-grid">
+                                <div class="tab-column">
+                                    <h4>Project Details</h4>
+                                    <p id="modal-description">Project description will appear here.</p>
+                                    
+                                    <h4>Key Achievements</h4>
+                                    <ul id="modal-achievements">
+                                        <!-- Achievements will be added dynamically -->
+                                    </ul>
+                                    
+                                    <h4>Technologies</h4>
+                                    <div id="modal-technologies" class="modal-tags">
+                                        <!-- Technologies will be added dynamically -->
+                                    </div>
+                                    
+                                    <div class="modal-buttons">
+                                        <a id="modal-demo" href="#" class="btn btn-primary">
+                                            <i class="fas fa-external-link-alt"></i>
+                                            Live Demo
+                                        </a>
+                                        <a id="modal-github" href="#" class="btn btn-outline">
+                                            <i class="fab fa-github"></i>
+                                            GitHub
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="tab-column">
+                                    <h4>Project Info</h4>
+                                    <div class="info-grid">
+                                        <div class="info-item">
+                                            <span class="info-label">Completed</span>
+                                            <span id="modal-completed" class="info-value">2023</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <span class="info-label">Team Size</span>
+                                            <span id="modal-team" class="info-value">3 people</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <span class="info-label">Difficulty</span>
+                                            <div id="modal-difficulty" class="stars">
+                                                <!-- Stars will be added dynamically -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-details" class="tab-content">
+                            <div id="modal-image" class="modal-image">
+                                <img src="https://via.placeholder.com/800x450" alt="Project Image">
+                            </div>
+                            <div class="tab-sections">
+                                <div class="tab-section">
+                                    <h4>Project Description</h4>
+                                    <p id="modal-long-description">Detailed description will appear here.</p>
+                                </div>
+                                <div class="tab-section">
+                                    <h4>Implementation Details</h4>
+                                    <p id="modal-implementation">Implementation details will appear here.</p>
+                                </div>
+                                <div class="tab-section">
+                                    <h4>Challenges & Solutions</h4>
+                                    <p id="modal-challenges">Challenges and solutions will appear here.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-gallery" class="tab-content">
+                            <div class="gallery-grid">
+                                <div class="gallery-item">
+                                    <img src="https://via.placeholder.com/600x400?text=Screenshot+1" alt="Screenshot 1">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="https://via.placeholder.com/600x400?text=Screenshot+2" alt="Screenshot 2">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="https://via.placeholder.com/600x400?text=Screenshot+3" alt="Screenshot 3">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="https://via.placeholder.com/600x400?text=Screenshot+4" alt="Screenshot 4">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="section-subtitle">Have a question or want to work together? Fill out the form and I'll get back to you as soon as possible.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>Feel free to reach out through any of these channels. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+                    
+                    <div class="info-items">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Email</h4>
+                                <p>shaq.williams.ai@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Phone</h4>
+                                <p>(917) 831-2482</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Location</h4>
+                                <p>New York, NY</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Your email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Message subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Your message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <div class="footer-logo">Shaquille Williams</div>
+                    <p class="footer-description">AI Engineer & Community Builder specializing in machine learning, generative AI, and STEM education.</p>
+                    <div class="footer-social">
+                        <a href="https://github.com" target="_blank" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="social-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="mailto:shaq.williams.ai@gmail.com" class="social-icon">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#publications">Publications</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to receive updates on new projects and articles.</p>
+                    <form id="newsletter-form" class="newsletter-form">
+                        <div class="form-group">
+                            <input type="email" id="newsletter-email" placeholder="Your email" required>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <p class="newsletter-note">I respect your privacy. Unsubscribe at any time.</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; <span id="current-year"></span> Shaquille Williams. All rights reserved.
+                </div>
+                <div class="back-to-top">
+                    <a href="#" id="back-to-top-btn">
+                        <i class="fas fa-arrow-up"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
 </body>
 </html>
