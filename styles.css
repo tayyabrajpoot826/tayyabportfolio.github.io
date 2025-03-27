@@ -284,7 +284,8 @@ img {
 }
 
 .badge {
-  display: inline-block;
+  display: flex;
+justify-content: center;
   padding: 0.5rem 1rem;
   background: rgba(139, 92, 246, 0.2);
   color: var(--purple-light);
@@ -486,7 +487,7 @@ img {
 .profile-image {
   width: 12rem;
   height: 12rem;
-  border-radius: 50%;
+  border-radius: 20px;
   overflow: hidden;
   border: 4px solid rgba(139, 92, 246, 0.3);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
@@ -2034,7 +2035,7 @@ img {
 /* Media Queries */
 @media (min-width: 640px) {
   .hero-title {
-    font-size: 3.5rem;
+    font-size: 65px;
   }
 
   .profile-image {
