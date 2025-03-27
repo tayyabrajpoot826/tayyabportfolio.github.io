@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Typed text effect for hero section
     const typedTextElement = document.getElementById('typed-text');
-    const textToType = "Senior Software Engineer, AI Specialist, and Community Organizer specializing in machine learning, generative AI, cybersecurity, and STEM education.";
+    const textToType = "Crafting Dynamic & Scalable Shopify & WordPress Solutions";
     let index = 0;
     
     function typeText() {
