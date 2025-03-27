@@ -1,5 +1,5 @@
 
-<script>
+
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Set current year in footer
@@ -472,4 +472,84 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', checkScroll);
 });
 
-</script>
+// Add this to your existing script.js file
+
+// Projects filter functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const filterTabs = document.querySelectorAll('.filter-tab');
+  const projectCards = document.querySelectorAll('.project-card');
+  
+  // Add animation classes to project cards
+  projectCards.forEach(card => {
+    card.classList.add('animate-fade-in-up');
+  });
+  
+  // Filter projects based on category
+  filterTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      // Remove active class from all tabs
+      filterTabs.forEach(t => t.classList.remove('active'));
+      
+      // Add active class to clicked tab
+      tab.classList.add('active');
+      
+      // Get filter value
+      const filter = tab.getAttribute('data-filter');
+      
+      // Filter projects with animation
+      projectCards.forEach(card => {
+        const category = card.getAttribute('data-category');
+        
+        // Reset animation
+        card.style.animation = 'none';
+        card.offsetHeight; // Trigger reflow
+        
+        if (filter === 'all' || category === filter) {
+          card.style.display = 'flex';
+          card.style.animation = 'fadeInUp 0.6s ease-out forwards';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+  
+  // Add hover pulse effect to featured project
+  const featuredHeading = document.querySelector('.featured-heading');
+  if (featuredHeading) {
+    featuredHeading.classList.add('animate-pulse');
+  }
+  
+  // Intersection Observer for scroll animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-fade-in-up');
+      }
+    });
+  }, { threshold: 0.1 });
+  
+  // Observe all project cards
+  projectCards.forEach(card => {
+    observer.observe(card);
+  });
+  
+  // Add parallax effect to project images on mouse move
+  const projectImages = document.querySelectorAll('.project-image');
+  
+  projectImages.forEach(image => {
+    image.addEventListener('mousemove', (e) => {
+      const { left, top, width, height } = image.getBoundingClientRect();
+      const x = (e.clientX - left) / width - 0.5;
+      const y = (e.clientY - top) / height - 0.5;
+      
+      const img = image.querySelector('img');
+      img.style.transform = `scale(1.1) translate(${x * 10}px, ${y * 10}px)`;
+    });
+    
+    image.addEventListener('mouseleave', () => {
+      const img = image.querySelector('img');
+      img.style.transform = 'scale(1)';
+    });
+  });
+});
