@@ -2033,6 +2033,67 @@ justify-content: center;
   font-size: 1.2rem;
 }
 
+.thankyou-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.thankyou-page .thank-you-container {
+  background: #fff;
+  padding: 50px 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 90%;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.thankyou-page .thank-you-container h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.thankyou-page .thank-you-container p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.thankyou-page .thank-you-container .btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #4facfe;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.thankyou-page .thank-you-container .btn:hover {
+  background-color: #00c6ff;
+}
+
+
 /* Media Queries */
 @media (min-width: 640px) {
   .hero-title {
