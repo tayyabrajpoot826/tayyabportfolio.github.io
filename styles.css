@@ -1361,13 +1361,6 @@ img {
     flex-direction: row;
     text-align: left;
   }
-  @media (max-width:767px){
-
-.hero-text {
-  text-align: center!important;
-}
-
-  }
 
   .hero-text {
     order: 1;
@@ -1409,6 +1402,14 @@ img {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+  @media (max-width:767px){
+
+.hero-text {
+  text-align: center!important;
+}
+
+  }
 
 /* Animations */
 @keyframes fadeIn {
