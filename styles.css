@@ -283,7 +283,6 @@ img {
 
 .hero-text {
   order: 1;
-  text-align: center;
 }
 
 .badge {
@@ -1361,6 +1360,13 @@ img {
     align-items: center;
     flex-direction: row;
     text-align: left;
+  }
+  @media (max-width:767px){
+
+.hero-text {
+  text-align: center;
+}
+
   }
 
   .hero-text {
