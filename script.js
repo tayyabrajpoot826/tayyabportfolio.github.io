@@ -349,3 +349,46 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+function toggleSkills(containerId, button) {
+    const container = document.getElementById(containerId);
+    const hiddenSkills = container.querySelectorAll('.hidden-skill');
+    const isExpanded = button.classList.contains('expanded');
+    
+    if (isExpanded) {
+        // Hide skills
+        hiddenSkills.forEach((skill, index) => {
+            setTimeout(() => {
+                skill.classList.remove('show');
+                setTimeout(() => {
+                    skill.style.display = 'none';
+                }, 300);
+            }, index * 50);
+        });
+        
+        button.innerHTML = '<i class="fas fa-chevron-down"></i><span>View All Skills</span>';
+        button.classList.remove('expanded');
+    } else {
+        // Show skills
+        hiddenSkills.forEach((skill, index) => {
+            setTimeout(() => {
+                skill.style.display = 'block';
+                setTimeout(() => {
+                    skill.classList.add('show');
+                }, 10);
+            }, index * 50);
+        });
+        
+        button.innerHTML = '<i class="fas fa-chevron-up"></i><span>Hide Skills</span>';
+        button.classList.add('expanded');
+    }
+}
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', function() {
+    // Ensure all hidden skills are initially hidden
+    const hiddenSkills = document.querySelectorAll('.hidden-skill');
+    hiddenSkills.forEach(skill => {
+        skill.style.display = 'none';
+    });
+});
