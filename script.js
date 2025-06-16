@@ -1,5 +1,6 @@
 // ===================================
 // PORTFOLIO WEBSITE JAVASCRIPT
+// Organized and Optimized
 // ===================================
 
 class PortfolioApp {
