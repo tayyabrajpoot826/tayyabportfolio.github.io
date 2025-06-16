@@ -1,9 +1,8 @@
 /* ===================================
-   CSS VARIABLES & BASE STYLES
+   CSS CUSTOM PROPERTIES (VARIABLES)
    =================================== */
-
 :root {
-  /* Color Palette */
+  /* Dark aesthetic theme */
   --background: #0f172a;
   --foreground: #e2e8f0;
   --card: #1e293b;
@@ -21,12 +20,12 @@
   --ring: #8b5cf6;
   --radius: 0.5rem;
 
-  /* Skill Levels */
+  /* Skill levels */
   --expert: #10b981;
   --advanced: #3b82f6;
   --intermediate: #f59e0b;
 
-  /* Custom Colors */
+  /* Custom colors - Aesthetic palette */
   --purple-primary: #8b5cf6;
   --purple-light: #a78bfa;
   --purple-dark: #7c3aed;
@@ -42,9 +41,8 @@
 }
 
 /* ===================================
-   RESET & BASE STYLES
+   BASE STYLES
    =================================== */
-
 * {
   margin: 0;
   padding: 0;
@@ -83,7 +81,6 @@ img {
 /* ===================================
    LAYOUT COMPONENTS
    =================================== */
-
 .container {
   width: 100%;
   max-width: 1200px;
@@ -133,17 +130,16 @@ img {
 /* ===================================
    HEADER STYLES
    =================================== */
-
 .header {
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.3);
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s, box-shadow 0.3s;
   background-color: rgba(15, 23, 42, 0.8);
   backdrop-filter: blur(10px);
-  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.3);
 }
 
 .header.scrolled {
@@ -173,6 +169,10 @@ img {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+.logo-details {
+  display: none;
 }
 
 /* Navigation Styles */
@@ -211,7 +211,7 @@ img {
   width: 100%;
 }
 
-/* Mobile Menu Styles */
+/* Header Actions */
 .header-actions {
   display: flex;
   align-items: center;
@@ -236,6 +236,7 @@ img {
   background-color: var(--slate-lighter);
 }
 
+/* Mobile Menu */
 .mobile-menu {
   display: none;
   background-color: var(--card);
@@ -261,7 +262,6 @@ img {
 /* ===================================
    HERO SECTION
    =================================== */
-
 .hero {
   min-height: 100vh;
   display: flex;
@@ -297,10 +297,9 @@ img {
 
 .hero-text {
   order: 1;
-  text-align: center;
 }
 
-/* Hero Text Elements */
+/* Hero Badge */
 .badge {
   display: flex;
   justify-content: center;
@@ -397,79 +396,6 @@ img {
   justify-content: center;
   gap: 1rem;
   margin-bottom: 1.5rem;
-}
-
-/* Button Styles */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.75rem 1.5rem;
-  border-radius: var(--radius);
-  font-weight: 500;
-  transition: all 0.3s;
-  cursor: pointer;
-  border: none;
-  font-size: 1rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: 0.5s;
-}
-
-.btn:hover::before {
-  left: 100%;
-}
-
-.btn i {
-  margin-left: 0.5rem;
-  transition: transform 0.3s;
-}
-
-.btn:hover i {
-  transform: translateX(3px);
-}
-
-.btn-primary {
-  background: linear-gradient(to right, var(--purple-primary), var(--purple-dark));
-  color: var(--primary-foreground);
-}
-
-.btn-primary:hover {
-  background: linear-gradient(to right, var(--purple-dark), var(--purple-primary));
-  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
-}
-
-.btn-outline {
-  background-color: transparent;
-  border: 1px solid var(--border);
-  color: var(--foreground);
-  box-shadow: inset 0 0 0 0 var(--purple-primary);
-  transition: all 0.3s ease-out;
-}
-
-.btn-outline:hover {
-  box-shadow: inset 0 -100px 0 0 var(--purple-primary);
-  color: var(--primary-foreground);
-  border-color: var(--purple-primary);
-}
-
-.btn-block {
-  width: 100%;
-}
-
-.btn-sm {
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
 }
 
 /* Social Links */
@@ -577,9 +503,88 @@ img {
 }
 
 /* ===================================
+   BUTTON STYLES
+   =================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  font-weight: 500;
+  transition: all 0.3s;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.btn i {
+  margin-left: 0.5rem;
+  transition: transform 0.3s;
+}
+
+.btn:hover i {
+  transform: translateX(3px);
+}
+
+.btn-primary {
+  background: linear-gradient(to right, var(--purple-primary), var(--purple-dark));
+  color: var(--primary-foreground);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(to right, var(--purple-dark), var(--purple-primary));
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid var(--border);
+  color: var(--foreground);
+  box-shadow: inset 0 0 0 0 var(--purple-primary);
+  transition: all 0.3s ease-out;
+}
+
+.btn-outline:hover {
+  box-shadow: inset 0 -100px 0 0 var(--purple-primary);
+  color: var(--primary-foreground);
+  border-color: var(--purple-primary);
+}
+
+.btn-light {
+  background-color: var(--primary-foreground);
+  color: var(--background);
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+/* ===================================
    ABOUT SECTION
    =================================== */
-
 .about {
   position: relative;
   overflow: hidden;
@@ -610,7 +615,7 @@ img {
 
 .about-content {
   display: flex;
-  flex-direction: column;
+  grid-template-columns: 1fr;
   gap: 3rem;
   position: relative;
   z-index: 1;
@@ -641,7 +646,6 @@ img {
 /* ===================================
    SKILLS SECTION
    =================================== */
-
 .skills {
   background: linear-gradient(135deg, #0a0a0a 0%, #111111 50%, #0a0a0a 100%);
   position: relative;
@@ -674,7 +678,12 @@ img {
   z-index: 0;
 }
 
-/* Skills Header */
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Skills Header Decoration */
 .header-decoration {
   display: flex;
   align-items: center;
@@ -704,10 +713,9 @@ img {
   gap: 2rem;
   max-width: 1000px;
   margin: 0 auto;
-  position: relative;
-  z-index: 1;
 }
 
+/* Premium Card */
 .premium-card {
   background: linear-gradient(135deg, rgba(17, 17, 17, 0.8) 0%, rgba(31, 31, 31, 0.6) 100%);
   border-radius: 24px;
@@ -772,6 +780,11 @@ img {
   overflow: hidden;
 }
 
+.ai-gradient {
+  background: linear-gradient(135deg, #8b5cf6, #a78bfa);
+  box-shadow: 0 8px 32px rgba(139, 92, 246, 0.3);
+}
+
 .dev-gradient {
   background: linear-gradient(135deg, #3b82f6, #60a5fa);
   box-shadow: 0 8px 32px rgba(59, 130, 246, 0.3);
@@ -802,6 +815,7 @@ img {
   font-weight: 500;
 }
 
+/* Progress Indicator */
 .progress-indicator {
   width: 4rem;
   height: 4px;
@@ -822,8 +836,8 @@ img {
 /* Skills Showcase */
 .skills-showcase {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   margin-top: 20px;
 }
 
@@ -855,6 +869,10 @@ img {
   background: linear-gradient(to bottom, #3b82f6, #1d4ed8);
 }
 
+.skill-item.intermediate-level::before {
+  background: linear-gradient(to bottom, #f59e0b, #d97706);
+}
+
 .skill-item:hover {
   background: rgba(255, 255, 255, 0.04);
   border-color: rgba(255, 255, 255, 0.1);
@@ -870,7 +888,6 @@ img {
 .skill-name-wrapper {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
 }
 
 .skill-name {
@@ -881,7 +898,7 @@ img {
 
 .skill-icon {
   font-size: 1.5em !important;
-  font-weight: 900;
+  margin-right: 12px;
 }
 
 .skill-level {
@@ -928,11 +945,12 @@ img {
   transform: translateY(0);
 }
 
+/* View All Button */
 .view-all-container {
   text-align: center;
   margin-top: 20px;
   padding-top: 15px;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .view-all-btn {
@@ -967,7 +985,6 @@ img {
 /* ===================================
    PROJECTS SECTION
    =================================== */
-
 .projects {
   background-color: var(--background);
   position: relative;
@@ -1127,24 +1144,22 @@ img {
   flex: 1;
 }
 
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
 .project-actions {
   display: flex;
   justify-content: center;
   margin-top: 2rem;
 }
 
-.hide-btn {
-  transition: all 0.3s ease;
-}
-
-.hide-btn:hover {
-  transform: translateY(-2px);
-}
-
 /* ===================================
    CONTACT SECTION
    =================================== */
-
 .contact {
   background-color: var(--slate-medium);
   position: relative;
@@ -1274,7 +1289,6 @@ img {
 /* ===================================
    FOOTER SECTION
    =================================== */
-
 .footer {
   background-color: var(--slate-dark);
   padding: 4rem 0 2rem;
@@ -1438,28 +1452,11 @@ img {
 }
 
 /* ===================================
-   ANIMATIONS & KEYFRAMES
+   ANIMATIONS
    =================================== */
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0) translateX(-50%);
-  }
-  40% {
-    transform: translateY(-10px) translateX(-50%);
-  }
-  60% {
-    transform: translateY(-5px) translateX(-50%);
-  }
-}
-
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @keyframes slideUp {
@@ -1484,15 +1481,35 @@ img {
   }
 }
 
-@keyframes blink {
-  0%, 50% { 
-    opacity: 1; 
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
   }
-  51%, 100% { 
-    opacity: 0; 
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
   }
 }
 
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) translateX(-50%);
+  }
+  40% {
+    transform: translateY(-10px) translateX(-50%);
+  }
+  60% {
+    transform: translateY(-5px) translateX(-50%);
+  }
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Animation Classes */
 .animate-fade-in {
   animation: fadeIn 0.5s ease-out forwards;
 }
@@ -1512,7 +1529,6 @@ img {
 /* ===================================
    RESPONSIVE DESIGN
    =================================== */
-
 @media (max-width: 767px) {
   .hero-text {
     text-align: center !important;
@@ -1547,6 +1563,10 @@ img {
 }
 
 @media (min-width: 930px) {
+  .logo-details {
+    display: block;
+  }
+
   .nav-desktop {
     display: block;
   }
@@ -1598,7 +1618,6 @@ img {
 /* ===================================
    CUSTOM SCROLLBAR
    =================================== */
-
 ::-webkit-scrollbar {
   width: 10px;
 }
