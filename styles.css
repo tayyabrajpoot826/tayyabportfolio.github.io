@@ -1012,7 +1012,94 @@ img {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 }
+.skill-name {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #2d3748;
+}
 
+.skill-icon {
+    font-size: 1.5em !important;
+    margin-right: 12px;
+}
+
+/* Hide/Show functionality */
+.hidden-skill {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.hidden-skill.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* View All Button Styling */
+.view-all-container {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.view-all-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.view-all-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.view-all-btn i {
+    transition: transform 0.3s ease;
+}
+
+.view-all-btn.expanded i {
+    transform: rotate(180deg);
+}
+
+/* Animation for skill items */
+.skill-item {
+    transition: all 0.3s ease;
+}
+
+.skills-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .skills-showcase {
+        grid-template-columns: 1fr;
+    }
+    
+    .skill-name {
+        font-size: 1em;
+    }
+    
+    .skill-icon {
+        font-size: 1.3em !important;
+    }
+}
 
 
 
