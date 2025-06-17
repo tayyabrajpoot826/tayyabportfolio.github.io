@@ -482,7 +482,8 @@ img {
   animation: bounce 2s infinite;
 }
 
-.scroll-indicator a {
+.scroll-indicator a,
+.scroll-down-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -496,7 +497,8 @@ img {
   backdrop-filter: blur(5px);
 }
 
-.scroll-indicator a:hover {
+.scroll-indicator a:hover,
+.scroll-down-btn:hover {
   background: linear-gradient(to right, var(--purple-primary), var(--pink-accent));
   color: var(--primary-foreground);
   border-color: transparent;
@@ -707,9 +709,6 @@ img {
             0%, 50% { opacity: 1; }
             51%, 100% { opacity: 0; }
         }
-
-
-
 
 .skills {
   background: linear-gradient(135deg, #0a0a0a 0%, #111111 50%, #0a0a0a 100%);
