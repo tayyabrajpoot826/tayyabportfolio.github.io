@@ -28,7 +28,6 @@ class PortfolioApp {
       this.setupSmoothScrolling()
       this.setupBackToTop()
       this.setupSkillsToggle()
-      this.setupSkillsButtons() // Add this line
     })
 
     window.addEventListener("scroll", this.debounce(this.handleScroll.bind(this), 100))
@@ -354,7 +353,7 @@ class PortfolioApp {
   // ===================================
   setupSmoothScrolling() {
     // Handle both anchor links and buttons with href attributes
-    document.querySelectorAll('a[href^="#"], button[onclick*="#"]').forEach((anchor) => {
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       anchor.addEventListener("click", (e) => {
         e.preventDefault()
         this.handleSmoothScroll(anchor)
@@ -363,16 +362,7 @@ class PortfolioApp {
   }
 
   handleSmoothScroll(element) {
-    let targetId
-
-    // Check if it's a button with onclick or an anchor with href
-    if (element.hasAttribute("onclick")) {
-      const onclickValue = element.getAttribute("onclick")
-      const match = onclickValue.match(/#[\w-]+/)
-      targetId = match ? match[0] : null
-    } else {
-      targetId = element.getAttribute("href")
-    }
+    const targetId = element.getAttribute("href")
 
     if (targetId === "#" || !targetId) {
       window.scrollTo({ top: 0, behavior: "smooth" })
@@ -481,60 +471,6 @@ class PortfolioApp {
   handleResize() {
     // Handle any resize-specific logic here
     this.checkElementsInView()
-  }
-
-  setupSkillsButtons() {
-    // Setup skills toggle buttons
-    const skillsButtons = document.querySelectorAll(".view-all-btn")
-    skillsButtons.forEach((button) => {
-      button.addEventListener("click", (e) => {
-        e.preventDefault()
-        const containerId = button.getAttribute("onclick").match(/toggleSkills\('([^']+)'/)[1]
-        toggleSkills(containerId, button)
-      })
-    })
-  }
-}
-
-// ===================================
-// GLOBAL FUNCTIONS (for HTML onclick)
-// ===================================
-function toggleSkills(containerId, button) {
-  const container = document.getElementById(containerId)
-  if (!container) {
-    console.error(`Container with ID '${containerId}' not found`)
-    return
-  }
-
-  const hiddenSkills = container.querySelectorAll(".hidden-skill")
-  const isExpanded = button.classList.contains("expanded")
-
-  if (isExpanded) {
-    // Hide skills
-    hiddenSkills.forEach((skill, index) => {
-      setTimeout(() => {
-        skill.classList.remove("show")
-        setTimeout(() => {
-          skill.style.display = "none"
-        }, 300)
-      }, index * 50)
-    })
-
-    button.innerHTML = '<i class="fas fa-chevron-down"></i><span>View All Skills</span>'
-    button.classList.remove("expanded")
-  } else {
-    // Show skills
-    hiddenSkills.forEach((skill, index) => {
-      setTimeout(() => {
-        skill.style.display = "block"
-        setTimeout(() => {
-          skill.classList.add("show")
-        }, 10)
-      }, index * 50)
-    })
-
-    button.innerHTML = '<i class="fas fa-chevron-up"></i><span>Hide Skills</span>'
-    button.classList.add("expanded")
   }
 }
 
