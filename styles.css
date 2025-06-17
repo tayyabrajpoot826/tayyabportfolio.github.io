@@ -649,66 +649,71 @@ img {
    SKILLS SECTION
    =================================== */
 
+/* Skills toggle styles */
+.hidden-skill {
+  display: none !important;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
 
- /* Skills toggle styles */
-        .hidden-skill {
-            display: none !important;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.3s ease;
-        }
-        
-        .hidden-skill.show {
-            display: block !important;
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .view-all-btn {
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-        
-        .view-all-btn:hover {
-            transform: translateY(-2px);
-        }
-        
-        .view-all-btn.expanded {
-            background-color: #6366f1;
-            color: white;
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @keyframes fadeOut {
-            from {
-                opacity: 1;
-                transform: translateY(0);
-            }
-            to {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-        }
+.hidden-skill.show {
+  display: block !important;
+  opacity: 1;
+  transform: translateY(0);
+}
 
-        /* Cursor animation */
-        .cursor {
-            animation: blink 1s infinite;
-        }
-        
-        @keyframes blink {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0; }
-        }
+.view-all-btn {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.view-all-btn:hover {
+  transform: translateY(-2px);
+}
+
+.view-all-btn.expanded {
+  background-color: #6366f1;
+  color: white;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+/* Cursor animation */
+.cursor {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
 
 .skills {
   background: linear-gradient(135deg, #0a0a0a 0%, #111111 50%, #0a0a0a 100%);
@@ -724,8 +729,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: 
-    radial-gradient(circle at 20% 30%, rgba(139, 92, 246, 0.12) 0%, transparent 50%),
+  background: radial-gradient(circle at 20% 30%, rgba(139, 92, 246, 0.12) 0%, transparent 50%),
     radial-gradient(circle at 80% 70%, rgba(244, 114, 182, 0.12) 0%, transparent 50%),
     radial-gradient(circle at 50% 20%, rgba(16, 185, 129, 0.08) 0%, transparent 60%);
   z-index: 0;
@@ -1519,8 +1523,12 @@ img {
    ANIMATIONS
    =================================== */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideUp {
@@ -1557,7 +1565,11 @@ img {
 }
 
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0) translateX(-50%);
   }
   40% {
@@ -1569,8 +1581,14 @@ img {
 }
 
 @keyframes blink {
-  0%, 50% { opacity: 1; }
-  51%, 100% { opacity: 0; }
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
 }
 
 /* Animation Classes */
@@ -1597,15 +1615,15 @@ img {
   .hero-text {
     text-align: center !important;
   }
-  
+
   .skills-showcase {
     grid-template-columns: 1fr;
   }
-  
+
   .skill-name {
     font-size: 1em;
   }
-  
+
   .skill-icon {
     font-size: 1.3em !important;
   }
