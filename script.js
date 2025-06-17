@@ -1,6 +1,6 @@
 // ===================================
 // PORTFOLIO WEBSITE JAVASCRIPT
-// Complete Working Version
+// Complete Working Version with Fixes
 // ===================================
 
 // Global functions that need to be accessible from HTML
