@@ -1,7 +1,64 @@
 // ===================================
 // PORTFOLIO WEBSITE JAVASCRIPT
-// Organized and Optimized
+// Complete Working Version
 // ===================================
+
+// Global functions that need to be accessible from HTML
+function scrollToAbout() {
+  const aboutSection = document.getElementById("about")
+  if (aboutSection) {
+    const headerHeight = document.querySelector(".header")?.offsetHeight || 0
+    const targetPosition = aboutSection.getBoundingClientRect().top + window.pageYOffset - headerHeight
+
+    window.scrollTo({
+      top: targetPosition,
+      behavior: "smooth",
+    })
+  }
+}
+
+function toggleSkills(containerId, button) {
+  console.log("toggleSkills called with:", containerId, button)
+  const container = document.getElementById(containerId)
+  if (!container) {
+    console.error(`Container with ID '${containerId}' not found`)
+    return
+  }
+
+  const hiddenSkills = container.querySelectorAll(".hidden-skill")
+  const isExpanded = button.classList.contains("expanded")
+
+  console.log("Hidden skills found:", hiddenSkills.length)
+  console.log("Is expanded:", isExpanded)
+
+  if (isExpanded) {
+    // Hide skills
+    hiddenSkills.forEach((skill, index) => {
+      setTimeout(() => {
+        skill.classList.remove("show")
+        setTimeout(() => {
+          skill.style.display = "none"
+        }, 300)
+      }, index * 50)
+    })
+
+    button.innerHTML = '<i class="fas fa-chevron-down"></i><span>View All Skills</span>'
+    button.classList.remove("expanded")
+  } else {
+    // Show skills
+    hiddenSkills.forEach((skill, index) => {
+      setTimeout(() => {
+        skill.style.display = "block"
+        setTimeout(() => {
+          skill.classList.add("show")
+        }, 10)
+      }, index * 50)
+    })
+
+    button.innerHTML = '<i class="fas fa-chevron-up"></i><span>Hide Skills</span>'
+    button.classList.add("expanded")
+  }
+}
 
 class PortfolioApp {
   constructor() {
@@ -81,12 +138,6 @@ class PortfolioApp {
 
   addBlinkingCursor(element) {
     element.innerHTML = element.textContent + '<span class="cursor">|</span>'
-    setInterval(() => {
-      const cursor = document.querySelector(".cursor")
-      if (cursor) {
-        cursor.style.opacity = cursor.style.opacity === "0" ? "1" : "0"
-      }
-    }, 500)
   }
 
   // ===================================
@@ -264,33 +315,25 @@ class PortfolioApp {
   // SKILLS TOGGLE FUNCTIONALITY
   // ===================================
   setupSkillsToggle() {
+    console.log("Setting up skills toggle...")
+
     // Ensure all hidden skills are initially hidden
     const hiddenSkills = document.querySelectorAll(".hidden-skill")
     hiddenSkills.forEach((skill) => {
       skill.style.display = "none"
     })
 
-    // Add fadeOut animation to CSS if not present
-    this.addFadeOutAnimation()
-  }
-
-  addFadeOutAnimation() {
-    if (!document.querySelector("style[data-fade-out]")) {
-      const style = document.createElement("style")
-      style.setAttribute("data-fade-out", "true")
-      style.textContent = `
-                @keyframes fadeOut {
-                    from {
-                        opacity: 1;
-                        transform: translateY(0);
-                    }
-                    to {
-                        opacity: 0;
-                        transform: translateY(-20px);
-                    }
-                }
-            `
-      document.head.appendChild(style)
+    // Setup the webdev skills toggle button
+    const webdevToggleBtn = document.getElementById("webdev-toggle-btn")
+    if (webdevToggleBtn) {
+      console.log("Found webdev toggle button")
+      webdevToggleBtn.addEventListener("click", (e) => {
+        e.preventDefault()
+        console.log("Webdev toggle button clicked")
+        toggleSkills("webdev-skills", webdevToggleBtn)
+      })
+    } else {
+      console.error("Webdev toggle button not found")
     }
   }
 
