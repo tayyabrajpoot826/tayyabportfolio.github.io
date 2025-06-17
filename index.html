@@ -15,51 +15,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- AOS CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <style>
-        /* Add styles for skills toggle functionality */
-        .hidden-skill {
-            display: none;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.3s ease;
-        }
-        
-        .hidden-skill.show {
-            display: block;
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .view-all-btn {
-            transition: all 0.3s ease;
-        }
-        
-        .view-all-btn:hover {
-            transform: translateY(-2px);
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @keyframes fadeOut {
-            from {
-                opacity: 1;
-                transform: translateY(0);
-            }
-            to {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-        }
-    </style>
+
 </head>
 <body>
     <!-- Header -->
@@ -142,7 +98,7 @@
                 </div>
             </div>
             <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="800">
-                <button onclick="scrollToAbout()" style="background: none; border: none; cursor: pointer; color: inherit;">
+                <button onclick="scrollToAbout()" style="background: none; border: none; cursor: pointer; color: inherit; font-size: inherit;">
                     <i class="fas fa-chevron-down"></i>
                 </button>
             </div>
@@ -496,7 +452,7 @@
                 </div>
                 <!-- View All/Hide Button for Web Development -->
                 <div class="view-all-container">
-                    <button class="view-all-btn" onclick="toggleSkills('webdev-skills', this)">
+                    <button class="view-all-btn" id="webdev-toggle-btn">
                         <i class="fas fa-chevron-down"></i>
                         <span>View All Skills</span>
                     </button>
@@ -1521,60 +1477,6 @@
                 mirror: false
             });
         });
-
-        // Function to scroll to About section
-        function scrollToAbout() {
-            const aboutSection = document.getElementById('about');
-            if (aboutSection) {
-                const headerHeight = document.querySelector('.header').offsetHeight;
-                const targetPosition = aboutSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        }
-
-        // Global function for skills toggle
-        function toggleSkills(containerId, button) {
-            const container = document.getElementById(containerId);
-            if (!container) {
-                console.error(`Container with ID '${containerId}' not found`);
-                return;
-            }
-
-            const hiddenSkills = container.querySelectorAll('.hidden-skill');
-            const isExpanded = button.classList.contains('expanded');
-
-            if (isExpanded) {
-                // Hide skills
-                hiddenSkills.forEach((skill, index) => {
-                    setTimeout(() => {
-                        skill.classList.remove('show');
-                        setTimeout(() => {
-                            skill.style.display = 'none';
-                        }, 300);
-                    }, index * 50);
-                });
-
-                button.innerHTML = '<i class="fas fa-chevron-down"></i><span>View All Skills</span>';
-                button.classList.remove('expanded');
-            } else {
-                // Show skills
-                hiddenSkills.forEach((skill, index) => {
-                    setTimeout(() => {
-                        skill.style.display = 'block';
-                        setTimeout(() => {
-                            skill.classList.add('show');
-                        }, 10);
-                    }, index * 50);
-                });
-
-                button.innerHTML = '<i class="fas fa-chevron-up"></i><span>Hide Skills</span>';
-                button.classList.add('expanded');
-            }
-        }
     </script>
 </body>
 </html>
