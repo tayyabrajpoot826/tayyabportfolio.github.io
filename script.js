@@ -17,49 +17,6 @@ function scrollToAbout() {
   }
 }
 
-function toggleSkills(containerId, button) {
-  console.log("toggleSkills called with:", containerId, button)
-  const container = document.getElementById(containerId)
-  if (!container) {
-    console.error(`Container with ID '${containerId}' not found`)
-    return
-  }
-
-  const hiddenSkills = container.querySelectorAll(".hidden-skill")
-  const isExpanded = button.classList.contains("expanded")
-
-  console.log("Hidden skills found:", hiddenSkills.length)
-  console.log("Is expanded:", isExpanded)
-
-  if (isExpanded) {
-    // Hide skills
-    hiddenSkills.forEach((skill, index) => {
-      setTimeout(() => {
-        skill.classList.remove("show")
-        setTimeout(() => {
-          skill.style.display = "none"
-        }, 300)
-      }, index * 50)
-    })
-
-    button.innerHTML = '<i class="fas fa-chevron-down"></i><span>View All Skills</span>'
-    button.classList.remove("expanded")
-  } else {
-    // Show skills
-    hiddenSkills.forEach((skill, index) => {
-      setTimeout(() => {
-        skill.style.display = "block"
-        setTimeout(() => {
-          skill.classList.add("show")
-        }, 10)
-      }, index * 50)
-    })
-
-    button.innerHTML = '<i class="fas fa-chevron-up"></i><span>Hide Skills</span>'
-    button.classList.add("expanded")
-  }
-}
-
 class PortfolioApp {
   constructor() {
     this.init()
@@ -317,24 +274,71 @@ class PortfolioApp {
   setupSkillsToggle() {
     console.log("Setting up skills toggle...")
 
+    // Find the toggle button with the new ID
+    const toggleButton = document.getElementById("skills-toggle-button")
+    if (!toggleButton) {
+      console.error("Skills toggle button not found")
+      return
+    }
+
+    console.log("Found skills toggle button")
+
     // Ensure all hidden skills are initially hidden
     const hiddenSkills = document.querySelectorAll(".hidden-skill")
     hiddenSkills.forEach((skill) => {
       skill.style.display = "none"
     })
 
-    // Setup the webdev skills toggle button
-    const webdevToggleBtn = document.getElementById("webdev-toggle-btn")
-    if (webdevToggleBtn) {
-      console.log("Found webdev toggle button")
-      webdevToggleBtn.addEventListener("click", (e) => {
-        e.preventDefault()
-        console.log("Webdev toggle button clicked")
-        toggleSkills("webdev-skills", webdevToggleBtn)
-      })
-    } else {
-      console.error("Webdev toggle button not found")
-    }
+    let isExpanded = false
+
+    toggleButton.addEventListener("click", (e) => {
+      e.preventDefault()
+      console.log("Skills toggle clicked, current state:", isExpanded)
+
+      const container = document.getElementById("webdev-skills")
+      if (!container) {
+        console.error("Skills container not found")
+        return
+      }
+
+      const hiddenSkills = container.querySelectorAll(".hidden-skill")
+      console.log("Found hidden skills:", hiddenSkills.length)
+
+      if (isExpanded) {
+        // Hide skills
+        hiddenSkills.forEach((skill, index) => {
+          setTimeout(() => {
+            skill.style.opacity = "0"
+            skill.style.transform = "translateY(-20px)"
+            setTimeout(() => {
+              skill.style.display = "none"
+            }, 300)
+          }, index * 50)
+        })
+
+        toggleButton.innerHTML = '<i class="fas fa-chevron-down"></i><span>View All Skills</span>'
+        toggleButton.classList.remove("expanded")
+        isExpanded = false
+      } else {
+        // Show skills
+        hiddenSkills.forEach((skill, index) => {
+          setTimeout(() => {
+            skill.style.display = "block"
+            skill.style.opacity = "0"
+            skill.style.transform = "translateY(20px)"
+
+            setTimeout(() => {
+              skill.style.opacity = "1"
+              skill.style.transform = "translateY(0)"
+            }, 10)
+          }, index * 100)
+        })
+
+        toggleButton.innerHTML = '<i class="fas fa-chevron-up"></i><span>Hide Skills</span>'
+        toggleButton.classList.add("expanded")
+        isExpanded = true
+      }
+    })
   }
 
   // ===================================
