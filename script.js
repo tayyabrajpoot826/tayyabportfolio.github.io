@@ -274,7 +274,7 @@ class PortfolioApp {
   setupSkillsToggle() {
     console.log("Setting up skills toggle...")
 
-    // Find the toggle button with the new ID
+    // Find the toggle button
     const toggleButton = document.getElementById("skills-toggle-button")
     if (!toggleButton) {
       console.error("Skills toggle button not found")
@@ -283,29 +283,54 @@ class PortfolioApp {
 
     console.log("Found skills toggle button")
 
+    // Find the skills container
+    const skillsContainer = document.getElementById("webdev-skills")
+    if (!skillsContainer) {
+      console.error("Skills container not found")
+      return
+    }
+
+    // Get all hidden skills
+    const hiddenSkills = skillsContainer.querySelectorAll(".hidden-skill")
+    console.log("Found hidden skills:", hiddenSkills.length)
+
     // Ensure all hidden skills are initially hidden
-    const hiddenSkills = document.querySelectorAll(".hidden-skill")
     hiddenSkills.forEach((skill) => {
       skill.style.display = "none"
+      skill.style.opacity = "0"
+      skill.style.transform = "translateY(20px)"
     })
 
     let isExpanded = false
 
     toggleButton.addEventListener("click", (e) => {
       e.preventDefault()
-      console.log("Skills toggle clicked, current state:", isExpanded)
+      console.log("Skills toggle clicked, current state expanded:", isExpanded)
+      console.log("Hidden skills count:", hiddenSkills.length)
 
-      const container = document.getElementById("webdev-skills")
-      if (!container) {
-        console.error("Skills container not found")
-        return
-      }
+      if (!isExpanded) {
+        // Show skills
+        console.log("Showing skills...")
+        hiddenSkills.forEach((skill, index) => {
+          setTimeout(() => {
+            skill.style.display = "block"
+            // Force reflow
+            skill.offsetHeight
+            setTimeout(() => {
+              skill.style.opacity = "1"
+              skill.style.transform = "translateY(0)"
+              skill.style.transition = "all 0.3s ease"
+            }, 10)
+          }, index * 100)
+        })
 
-      const hiddenSkills = container.querySelectorAll(".hidden-skill")
-      console.log("Found hidden skills:", hiddenSkills.length)
-
-      if (isExpanded) {
+        toggleButton.innerHTML = '<i class="fas fa-chevron-up"></i><span>Hide Skills</span>'
+        toggleButton.classList.add("expanded")
+        isExpanded = true
+        console.log("Skills should now be visible")
+      } else {
         // Hide skills
+        console.log("Hiding skills...")
         hiddenSkills.forEach((skill, index) => {
           setTimeout(() => {
             skill.style.opacity = "0"
@@ -319,26 +344,11 @@ class PortfolioApp {
         toggleButton.innerHTML = '<i class="fas fa-chevron-down"></i><span>View All Skills</span>'
         toggleButton.classList.remove("expanded")
         isExpanded = false
-      } else {
-        // Show skills
-        hiddenSkills.forEach((skill, index) => {
-          setTimeout(() => {
-            skill.style.display = "block"
-            skill.style.opacity = "0"
-            skill.style.transform = "translateY(20px)"
-
-            setTimeout(() => {
-              skill.style.opacity = "1"
-              skill.style.transform = "translateY(0)"
-            }, 10)
-          }, index * 100)
-        })
-
-        toggleButton.innerHTML = '<i class="fas fa-chevron-up"></i><span>Hide Skills</span>'
-        toggleButton.classList.add("expanded")
-        isExpanded = true
+        console.log("Skills should now be hidden")
       }
     })
+
+    console.log("Skills toggle setup complete")
   }
 
   // ===================================
