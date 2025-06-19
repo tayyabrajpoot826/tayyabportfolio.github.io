@@ -1174,7 +1174,7 @@ img {
 }
 
 .project-header {
-  display: flex;
+  display: none;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
@@ -1207,6 +1207,7 @@ img {
 }
 
 .project-description {
+   display:none;
   color: var(--muted-foreground);
   font-size: 0.875rem;
   margin-bottom: 1rem;
@@ -1214,7 +1215,7 @@ img {
 }
 
 .project-tags {
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-bottom: 1rem;
