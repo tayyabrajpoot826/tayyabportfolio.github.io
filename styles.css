@@ -779,7 +779,7 @@ img {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
-  max-width: 1000px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -965,7 +965,7 @@ img {
 }
 
 .skill-icon {
-  font-size: 1.5em !important;
+  font-size: 2.5em !important;
   margin-right: 12px;
 }
 
@@ -976,6 +976,7 @@ img {
 }
 
 .level-text {
+   display:none;
   font-size: 0.875rem;
   font-weight: 500;
   color: var(--muted-foreground);
@@ -1625,7 +1626,7 @@ img {
   }
 
   .skill-icon {
-    font-size: 1.3em !important;
+    font-size: 2.3em !important;
   }
 }
 
