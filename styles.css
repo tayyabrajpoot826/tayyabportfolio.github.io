@@ -1,42 +1,42 @@
 /* ===================================
    CSS CUSTOM PROPERTIES (VARIABLES)
    =================================== */
-/* Updated to pure dark color scheme with black and charcoal tones */
 :root {
-  /* Dark professional theme - Black and charcoal palette */
+  /* Dark black and brown professional gradient theme */
   --background: #000000;
-  --foreground: #e5e5e5;
-  --card: #1a1a1a;
-  --card-foreground: #e5e5e5;
-  --primary: #2d2d2d;
+  --foreground: #e8dcc8;
+  --card: #1a1410;
+  --card-foreground: #e8dcc8;
+  --primary: #8b6f47;
   --primary-foreground: #ffffff;
-  --secondary: #3a3a3a;
+  --secondary: #654321;
   --secondary-foreground: #ffffff;
-  --accent: #404040;
+  --accent: #a0826d;
   --accent-foreground: #ffffff;
-  --muted: #262626;
-  --muted-foreground: #a3a3a3;
-  --border: #333333;
-  --input: #1a1a1a;
-  --ring: #404040;
+  --muted: #2d2416;
+  --muted-foreground: #b8a890;
+  --border: #3d2e1f;
+  --input: #1a1410;
+  --ring: #8b6f47;
   --radius: 0.5rem;
 
   /* Skill levels */
-  --expert: #4d4d4d;
-  --advanced: #3d3d3d;
-  --intermediate: #2e2e2e;
+  --expert: #7c9d4f;
+  --advanced: #5a8aa8;
+  --intermediate: #c89553;
 
-  /* Custom colors - Dark monochrome palette */
-  --dark-primary: #1a1a1a;
-  --dark-secondary: #2d2d2d;
-  --dark-accent: #404040;
-  --charcoal: #1a1a1a;
-  --charcoal-medium: #262626;
-  --charcoal-light: #333333;
-  --charcoal-lighter: #404040;
-  --text-primary: #e5e5e5;
-  --text-secondary: #a3a3a3;
-  --text-muted: #737373;
+  /* Custom colors - Dark brown aesthetic palette */
+  --brown-primary: #8b6f47;
+  --brown-light: #a0826d;
+  --brown-dark: #654321;
+  --brown-accent: #a67c52;
+  --brown-muted: #4a3a2a;
+  --warm-accent: #c89553;
+  --warm-light: #d4a574;
+  --black-primary: #000000;
+  --black-light: #1a1410;
+  --black-medium: #2d2416;
+  --black-dark: #0a0806;
 }
 
 /* ===================================
@@ -96,20 +96,18 @@ img {
   margin-bottom: 3rem;
 }
 
-/* Updated section title with dark gradient */
 .section-title {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
   position: relative;
   display: inline-block;
-  background: linear-gradient(to right, #404040, #595959);
+  background: linear-gradient(135deg, var(--brown-primary), var(--warm-accent));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
-/* Updated title underline with dark gradient */
 .section-title::after {
   content: "";
   position: absolute;
@@ -117,7 +115,7 @@ img {
   left: 0;
   width: 100%;
   height: 0.25rem;
-  background: linear-gradient(to right, #2d2d2d, #404040);
+  background: linear-gradient(90deg, var(--brown-primary), var(--warm-accent));
   border-radius: 1rem;
 }
 
@@ -131,7 +129,6 @@ img {
 /* ===================================
    HEADER STYLES
    =================================== */
-/* Updated header with pure black background */
 .header {
   box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.8);
   position: fixed;
@@ -140,13 +137,13 @@ img {
   width: 100%;
   z-index: 1000;
   transition: background-color 0.3s, box-shadow 0.3s;
-  background-color: rgba(0, 0, 0, 0.9);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.95) 0%, rgba(26, 20, 16, 0.9) 100%);
   backdrop-filter: blur(10px);
 }
 
 .header.scrolled {
-  background-color: rgba(26, 26, 26, 0.95);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+  background: linear-gradient(180deg, rgba(26, 20, 16, 0.98) 0%, rgba(45, 36, 22, 0.95) 100%);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.9);
   border-bottom: 1px solid var(--border);
 }
 
@@ -164,11 +161,10 @@ img {
   gap: 0.5rem;
 }
 
-/* Updated logo text with dark gradient */
 .logo-text {
   font-size: 1.5rem;
   font-weight: 700;
-  background: linear-gradient(to right, #737373, #a3a3a3);
+  background: linear-gradient(135deg, var(--brown-primary), var(--warm-accent));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -192,14 +188,15 @@ img {
   font-size: 18px;
   font-weight: bold;
   position: relative;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
+  color: var(--foreground);
 }
 
+/* Professional hover effect for nav links */
 .nav-link:hover {
-  color: var(--text-secondary);
+  color: var(--warm-accent);
 }
 
-/* Updated nav link underline with dark gradient */
 .nav-link::after {
   content: "";
   position: absolute;
@@ -207,8 +204,8 @@ img {
   left: 0;
   width: 0;
   height: 0.125rem;
-  background: linear-gradient(to right, #2d2d2d, #404040);
-  transition: width 0.3s;
+  background: linear-gradient(90deg, var(--brown-primary), var(--warm-accent));
+  transition: width 0.4s ease;
 }
 
 .nav-link:hover::after {
@@ -233,17 +230,20 @@ img {
   border: 1px solid var(--border);
   color: var(--foreground);
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
 }
 
+/* Professional hover effect for mobile toggle */
 .mobile-menu-toggle:hover {
-  background-color: var(--charcoal-lighter);
+  background-color: var(--brown-muted);
+  border-color: var(--brown-primary);
+  transform: scale(1.05);
 }
 
 /* Mobile Menu */
 .mobile-menu {
   display: none;
-  background-color: var(--card);
+  background: linear-gradient(180deg, var(--card) 0%, var(--muted) 100%);
   border-top: 1px solid var(--border);
   padding: 1rem;
 }
@@ -256,27 +256,29 @@ img {
   display: block;
   padding: 0.75rem 0;
   font-weight: 500;
-  transition: color 0.3s;
+  transition: all 0.3s ease;
 }
 
+/* Professional hover effect for mobile nav links */
 .mobile-nav-link:hover {
-  color: var(--text-secondary);
+  color: var(--warm-accent);
+  padding-left: 0.5rem;
 }
 
 /* ===================================
    HERO SECTION
    =================================== */
-/* Updated hero with black background and dark overlays */
 .hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
   position: relative;
   padding-top: 4rem;
-  background: linear-gradient(to bottom, #000000, #0d0d0d);
+  background: linear-gradient(180deg, var(--black-primary) 0%, var(--black-light) 50%, var(--black-medium) 100%);
   overflow: hidden;
 }
 
+/* Dark brown gradient overlay effects */
 .hero::before {
   content: "";
   position: absolute;
@@ -284,8 +286,8 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at 20% 30%, rgba(45, 45, 45, 0.2) 0%, transparent 50%),
-    radial-gradient(circle at 80% 70%, rgba(64, 64, 64, 0.15) 0%, transparent 50%);
+  background: radial-gradient(circle at 20% 30%, rgba(139, 111, 71, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(200, 149, 83, 0.12) 0%, transparent 50%);
   z-index: 0;
 }
 
@@ -305,27 +307,25 @@ img {
 }
 
 /* Hero Badge */
-/* Updated badge with dark background */
 .badge {
   display: flex;
   justify-content: center;
   padding: 0.5rem 1rem;
-  background: rgba(45, 45, 45, 0.4);
-  color: var(--text-secondary);
+  background: rgba(139, 111, 71, 0.2);
+  color: var(--brown-light);
   border-radius: 2rem;
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 1.5rem;
-  border: 1px solid rgba(64, 64, 64, 0.3);
+  border: 1px solid rgba(139, 111, 71, 0.4);
   backdrop-filter: blur(5px);
 }
 
-/* Updated hero title with dark gradient */
 .hero-title {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
-  background: linear-gradient(to right, #737373, #a3a3a3);
+  background: linear-gradient(135deg, var(--brown-light), var(--warm-light));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -349,25 +349,26 @@ img {
   margin-bottom: 1.5rem;
 }
 
-/* Updated tag styles with dark backgrounds */
 .tag {
   display: inline-flex;
   align-items: center;
   padding: 0.5rem 1rem;
-  background: rgba(38, 38, 38, 0.8);
+  background: rgba(45, 36, 22, 0.6);
   color: var(--foreground);
   border: 1px solid var(--border);
   border-radius: 2rem;
   font-size: 0.875rem;
   font-weight: 500;
-  transition: all 0.3s;
+  transition: all 0.4s ease;
   backdrop-filter: blur(5px);
 }
 
+/* Professional hover effect for tags */
 .tag:hover {
-  background: rgba(64, 64, 64, 0.9);
-  transform: translateY(-2px);
-  border-color: var(--charcoal-lighter);
+  background: rgba(74, 58, 42, 0.8);
+  transform: translateY(-3px);
+  border-color: var(--brown-primary);
+  box-shadow: 0 8px 16px rgba(139, 111, 71, 0.3);
 }
 
 .tag i {
@@ -375,21 +376,21 @@ img {
 }
 
 .tag-blue {
-  background: rgba(45, 45, 45, 0.4);
-  color: var(--text-secondary);
-  border-color: rgba(51, 51, 51, 0.5);
+  background: rgba(90, 138, 168, 0.2);
+  color: #7ba8c4;
+  border-color: rgba(90, 138, 168, 0.3);
 }
 
 .tag-purple {
-  background: rgba(45, 45, 45, 0.4);
-  color: var(--text-secondary);
-  border-color: rgba(51, 51, 51, 0.5);
+  background: rgba(139, 111, 71, 0.2);
+  color: var(--brown-light);
+  border-color: rgba(139, 111, 71, 0.3);
 }
 
 .tag-green {
-  background: rgba(45, 45, 45, 0.4);
-  color: var(--text-secondary);
-  border-color: rgba(51, 51, 51, 0.5);
+  background: rgba(124, 157, 79, 0.2);
+  color: #97b86d;
+  border-color: rgba(124, 157, 79, 0.3);
 }
 
 .tag-sm {
@@ -423,15 +424,16 @@ img {
   background-color: var(--muted);
   border: 1px solid var(--border);
   color: var(--foreground);
-  transition: all 0.3s;
+  transition: all 0.4s ease;
 }
 
-/* Updated social link hover with dark gradient */
+/* Professional hover effect for social links */
 .social-link:hover {
-  background: linear-gradient(to right, #2d2d2d, #404040);
+  background: linear-gradient(135deg, var(--brown-primary), var(--warm-accent));
   color: var(--primary-foreground);
-  transform: translateY(-3px);
+  transform: translateY(-5px) scale(1.1);
   border-color: transparent;
+  box-shadow: 0 8px 20px rgba(139, 111, 71, 0.4);
 }
 
 /* Hero Image */
@@ -442,15 +444,22 @@ img {
   margin-bottom: 2rem;
 }
 
-/* Updated profile image border with dark color */
 .profile-image {
   width: 25rem;
   height: 31rem;
   border-radius: 20px;
   overflow: hidden;
-  border: 4px solid rgba(64, 64, 64, 0.4);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  border: 4px solid rgba(139, 111, 71, 0.4);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
   position: relative;
+  transition: all 0.4s ease;
+}
+
+/* Professional hover effect for profile image */
+.profile-image:hover {
+  transform: translateY(-5px);
+  border-color: rgba(139, 111, 71, 0.6);
+  box-shadow: 0 15px 50px rgba(139, 111, 71, 0.3);
 }
 
 .profile-image::before {
@@ -460,7 +469,7 @@ img {
   right: -10px;
   width: 3rem;
   height: 3rem;
-  background-color: rgba(45, 45, 45, 0.5);
+  background-color: rgba(139, 111, 71, 0.4);
   border-radius: 50%;
   filter: blur(15px);
 }
@@ -472,7 +481,7 @@ img {
   left: -10px;
   width: 3rem;
   height: 3rem;
-  background-color: rgba(64, 64, 64, 0.4);
+  background-color: rgba(200, 149, 83, 0.4);
   border-radius: 50%;
   filter: blur(15px);
 }
@@ -500,19 +509,21 @@ img {
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-  background: rgba(26, 26, 26, 0.9);
+  background: rgba(26, 20, 16, 0.8);
   border: 1px solid var(--border);
   color: var(--foreground);
-  transition: all 0.3s;
+  transition: all 0.4s ease;
   backdrop-filter: blur(5px);
 }
 
-/* Updated scroll button hover with dark gradient */
+/* Professional hover effect for scroll indicator */
 .scroll-indicator a:hover,
 .scroll-down-btn:hover {
-  background: linear-gradient(to right, #2d2d2d, #404040);
+  background: linear-gradient(135deg, var(--brown-primary), var(--warm-accent));
   color: var(--primary-foreground);
   border-color: transparent;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(139, 111, 71, 0.4);
 }
 
 /* ===================================
@@ -525,7 +536,7 @@ img {
   padding: 0.75rem 1.5rem;
   border-radius: var(--radius);
   font-weight: 500;
-  transition: all 0.3s;
+  transition: all 0.4s ease;
   cursor: pointer;
   border: none;
   font-size: 1rem;
@@ -540,7 +551,7 @@ img {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
   transition: 0.5s;
 }
 
@@ -550,36 +561,39 @@ img {
 
 .btn i {
   margin-left: 0.5rem;
-  transition: transform 0.3s;
+  transition: transform 0.3s ease;
 }
 
 .btn:hover i {
-  transform: translateX(3px);
+  transform: translateX(5px);
 }
 
-/* Updated button styles with dark gradients */
 .btn-primary {
-  background: linear-gradient(to right, #2d2d2d, #404040);
+  background: linear-gradient(135deg, var(--brown-primary), var(--brown-dark));
   color: var(--primary-foreground);
 }
 
+/* Professional hover effect for primary button */
 .btn-primary:hover {
-  background: linear-gradient(to right, #404040, #4d4d4d);
-  box-shadow: 0 4px 15px rgba(45, 45, 45, 0.5);
+  background: linear-gradient(135deg, var(--warm-accent), var(--brown-primary));
+  box-shadow: 0 8px 24px rgba(139, 111, 71, 0.5);
+  transform: translateY(-3px);
 }
 
 .btn-outline {
   background-color: transparent;
   border: 1px solid var(--border);
   color: var(--foreground);
-  box-shadow: inset 0 0 0 0 var(--dark-accent);
-  transition: all 0.3s ease-out;
+  box-shadow: inset 0 0 0 0 var(--brown-primary);
+  transition: all 0.4s ease;
 }
 
+/* Professional hover effect for outline button */
 .btn-outline:hover {
-  box-shadow: inset 0 -100px 0 0 var(--dark-accent);
+  box-shadow: inset 0 -100px 0 0 var(--brown-primary);
   color: var(--primary-foreground);
-  border-color: var(--dark-accent);
+  border-color: var(--brown-primary);
+  transform: translateY(-2px);
 }
 
 .btn-light {
@@ -599,13 +613,13 @@ img {
 /* ===================================
    ABOUT SECTION
    =================================== */
-/* Updated about section with dark background */
 .about {
   position: relative;
   overflow: hidden;
-  background-color: #0d0d0d;
+  background: linear-gradient(180deg, var(--black-medium) 0%, var(--black-light) 100%);
 }
 
+/* Dark brown gradient overlay effects */
 .about::before {
   content: "";
   position: absolute;
@@ -613,7 +627,7 @@ img {
   right: 0;
   width: 33%;
   height: 33%;
-  background: radial-gradient(circle, rgba(45, 45, 45, 0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(139, 111, 71, 0.15) 0%, transparent 70%);
   z-index: 0;
 }
 
@@ -624,7 +638,7 @@ img {
   left: 0;
   width: 33%;
   height: 33%;
-  background: radial-gradient(circle, rgba(38, 38, 38, 0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(200, 149, 83, 0.12) 0%, transparent 70%);
   z-index: 0;
 }
 
@@ -636,12 +650,11 @@ img {
   z-index: 1;
 }
 
-/* Updated about heading with dark gradient */
 .about-text h3 {
   font-size: 1.75rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
-  background: linear-gradient(to right, #737373, #a3a3a3);
+  background: linear-gradient(135deg, var(--brown-light), var(--warm-light));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -678,16 +691,18 @@ img {
 }
 
 .view-all-btn {
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
   cursor: pointer;
 }
 
+/* Professional hover effect for view all button */
 .view-all-btn:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(139, 111, 71, 0.4);
 }
 
 .view-all-btn.expanded {
-  background-color: #404040;
+  background: linear-gradient(135deg, var(--brown-primary), var(--warm-accent));
   color: white;
 }
 
@@ -729,14 +744,14 @@ img {
   }
 }
 
-/* Updated skills section with pure black background */
 .skills {
-  background: linear-gradient(135deg, #000000 0%, #0d0d0d 50%, #000000 100%);
+  background: linear-gradient(180deg, #000000 0%, #1a1410 50%, #000000 100%);
   position: relative;
   overflow: hidden;
   padding: 6rem 0;
 }
 
+/* Dark brown gradient overlay effects */
 .skills::before {
   content: "";
   position: absolute;
@@ -744,9 +759,9 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at 20% 30%, rgba(45, 45, 45, 0.12) 0%, transparent 50%),
-    radial-gradient(circle at 80% 70%, rgba(38, 38, 38, 0.12) 0%, transparent 50%),
-    radial-gradient(circle at 50% 20%, rgba(51, 51, 51, 0.08) 0%, transparent 60%);
+  background: radial-gradient(circle at 20% 30%, rgba(139, 111, 71, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(200, 149, 83, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 50% 20%, rgba(124, 157, 79, 0.08) 0%, transparent 60%);
   z-index: 0;
 }
 
@@ -757,7 +772,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M20 20c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10zm10 0c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10z'/%3E%3C/g%3E%3C/svg%3E");
+  background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%238b6f47' fill-opacity='0.02'%3E%3Cpath d='M20 20c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10zm10 0c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10z'/%3E%3C/g%3E%3C/svg%3E");
   z-index: 0;
 }
 
@@ -775,19 +790,18 @@ img {
   margin-bottom: 1.5rem;
 }
 
-/* Updated decoration line with dark gradient */
 .decoration-line {
   width: 3rem;
   height: 2px;
-  background: linear-gradient(to right, transparent, #404040, transparent);
+  background: linear-gradient(to right, transparent, var(--brown-primary), transparent);
 }
 
 .decoration-dot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--dark-accent);
-  box-shadow: 0 0 20px rgba(64, 64, 64, 0.5);
+  background: var(--brown-primary);
+  box-shadow: 0 0 20px rgba(139, 111, 71, 0.5);
 }
 
 /* Skills Container */
@@ -800,14 +814,13 @@ img {
 }
 
 /* Premium Card */
-/* Updated premium card with dark backgrounds */
 .premium-card {
-  background: linear-gradient(135deg, rgba(13, 13, 13, 0.9) 0%, rgba(26, 26, 26, 0.7) 100%);
+  background: linear-gradient(135deg, rgba(26, 20, 16, 0.8) 0%, rgba(45, 36, 22, 0.6) 100%);
   border-radius: 24px;
   padding: 2rem;
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(64, 64, 64, 0.2);
+  border: 1px solid rgba(139, 111, 71, 0.2);
   backdrop-filter: blur(10px);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -819,7 +832,7 @@ img {
   left: 0;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #2d2d2d, #404040, transparent);
+  background: linear-gradient(90deg, transparent, var(--brown-primary), var(--warm-accent), transparent);
 }
 
 .premium-card::after {
@@ -829,14 +842,16 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at 50% 0%, rgba(45, 45, 45, 0.05) 0%, transparent 50%);
+  background: radial-gradient(circle at 50% 0%, rgba(139, 111, 71, 0.05) 0%, transparent 50%);
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.4s ease;
 }
 
+/* Professional hover effect for premium card */
 .premium-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(64, 64, 64, 0.3);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(139, 111, 71, 0.3);
+  border-color: rgba(139, 111, 71, 0.4);
 }
 
 .premium-card:hover::after {
@@ -863,22 +878,27 @@ img {
   color: white;
   position: relative;
   overflow: hidden;
+  transition: all 0.4s ease;
 }
 
-/* Updated icon gradients with dark tones */
 .ai-gradient {
-  background: linear-gradient(135deg, #2d2d2d, #404040);
-  box-shadow: 0 8px 32px rgba(45, 45, 45, 0.4);
+  background: linear-gradient(135deg, #8b6f47, #a0826d);
+  box-shadow: 0 8px 32px rgba(139, 111, 71, 0.4);
 }
 
 .dev-gradient {
-  background: linear-gradient(135deg, #262626, #333333);
-  box-shadow: 0 8px 32px rgba(38, 38, 38, 0.4);
+  background: linear-gradient(135deg, #5a8aa8, #7ba8c4);
+  box-shadow: 0 8px 32px rgba(90, 138, 168, 0.4);
 }
 
 .design-gradient {
-  background: linear-gradient(135deg, #333333, #404040);
-  box-shadow: 0 8px 32px rgba(51, 51, 51, 0.4);
+  background: linear-gradient(135deg, #c89553, #d4a574);
+  box-shadow: 0 8px 32px rgba(200, 149, 83, 0.4);
+}
+
+/* Professional hover effect for icon wrapper */
+.icon-wrapper:hover {
+  transform: scale(1.1) rotate(5deg);
 }
 
 .header-content {
@@ -895,7 +915,7 @@ img {
 .category-badge {
   font-size: 0.875rem;
   color: var(--muted-foreground);
-  background: rgba(64, 64, 64, 0.15);
+  background: rgba(139, 111, 71, 0.1);
   padding: 0.25rem 0.75rem;
   border-radius: 12px;
   font-weight: 500;
@@ -905,17 +925,16 @@ img {
 .progress-indicator {
   width: 4rem;
   height: 4px;
-  background: rgba(64, 64, 64, 0.2);
+  background: rgba(139, 111, 71, 0.2);
   border-radius: 2px;
   overflow: hidden;
   position: relative;
 }
 
-/* Updated progress bar with dark gradient */
 .progress-bar {
   height: 100%;
   width: var(--progress);
-  background: linear-gradient(90deg, #2d2d2d, #404040);
+  background: linear-gradient(90deg, var(--brown-primary), var(--warm-accent));
   border-radius: 2px;
   transition: width 1s ease-out;
 }
@@ -928,13 +947,12 @@ img {
   margin-top: 20px;
 }
 
-/* Updated skill items with dark backgrounds */
 .skill-item {
-  background: rgba(26, 26, 26, 0.4);
+  background: rgba(139, 111, 71, 0.05);
   border-radius: 16px;
   padding: 1.25rem;
-  border: 1px solid rgba(64, 64, 64, 0.15);
-  transition: all 0.3s ease;
+  border: 1px solid rgba(139, 111, 71, 0.15);
+  transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
 }
@@ -946,26 +964,27 @@ img {
   top: 0;
   width: 3px;
   height: 100%;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
 }
 
-/* Updated skill level borders with dark gradients */
 .skill-item.expert-level::before {
-  background: linear-gradient(to bottom, #4d4d4d, #333333);
+  background: linear-gradient(to bottom, #7c9d4f, #5a7a3a);
 }
 
 .skill-item.advanced-level::before {
-  background: linear-gradient(to bottom, #3d3d3d, #2d2d2d);
+  background: linear-gradient(to bottom, #5a8aa8, #3d5f75);
 }
 
 .skill-item.intermediate-level::before {
-  background: linear-gradient(to bottom, #404040, #2e2e2e);
+  background: linear-gradient(to bottom, #c89553, #a5753d);
 }
 
+/* Professional hover effect for skill item */
 .skill-item:hover {
-  background: rgba(38, 38, 38, 0.6);
-  border-color: rgba(64, 64, 64, 0.3);
-  transform: translateX(4px);
+  background: rgba(139, 111, 71, 0.1);
+  border-color: rgba(139, 111, 71, 0.3);
+  transform: translateX(8px);
+  box-shadow: 0 4px 12px rgba(139, 111, 71, 0.2);
 }
 
 .skill-content {
@@ -1012,13 +1031,13 @@ img {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: rgba(64, 64, 64, 0.3);
+  background: rgba(139, 111, 71, 0.3);
   transition: all 0.3s ease;
 }
 
 .dot.active {
-  background: var(--dark-accent);
-  box-shadow: 0 0 8px rgba(64, 64, 64, 0.5);
+  background: var(--brown-primary);
+  box-shadow: 0 0 8px rgba(139, 111, 71, 0.5);
 }
 
 /* Skills Toggle Functionality */
@@ -1040,12 +1059,11 @@ img {
   text-align: center;
   margin-top: 20px;
   padding-top: 15px;
-  border-top: 1px solid rgba(64, 64, 64, 0.2);
+  border-top: 1px solid rgba(139, 111, 71, 0.2);
 }
 
-/* Updated view all button with dark gradient */
 .view-all-btn {
-  background: linear-gradient(135deg, #2d2d2d 0%, #404040 100%);
+  background: linear-gradient(135deg, #8b6f47 0%, #654321 100%);
   color: white;
   border: none;
   padding: 12px 24px;
@@ -1053,16 +1071,18 @@ img {
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  box-shadow: 0 4px 15px rgba(45, 45, 45, 0.4);
+  box-shadow: 0 4px 15px rgba(139, 111, 71, 0.4);
 }
 
+/* Professional hover effect for view all button */
 .view-all-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(45, 45, 45, 0.5);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(139, 111, 71, 0.5);
+  background: linear-gradient(135deg, #a0826d 0%, #8b6f47 100%);
 }
 
 .view-all-btn i {
@@ -1076,13 +1096,13 @@ img {
 /* ===================================
    PROJECTS SECTION
    =================================== */
-/* Updated projects section with black background */
 .projects {
-  background-color: var(--background);
+  background: linear-gradient(180deg, var(--black-primary) 0%, var(--black-light) 100%);
   position: relative;
   overflow: hidden;
 }
 
+/* Dark brown gradient overlay effects */
 .projects::before {
   content: "";
   position: absolute;
@@ -1090,8 +1110,8 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at 20% 30%, rgba(45, 45, 45, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 70%, rgba(38, 38, 38, 0.1) 0%, transparent 50%);
+  background: radial-gradient(circle at 20% 30%, rgba(139, 111, 71, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(200, 149, 83, 0.08) 0%, transparent 50%);
   z-index: 0;
 }
 
@@ -1101,7 +1121,6 @@ img {
   z-index: 1;
 }
 
-/* Updated category title with dark gradient */
 .category-title {
   font-size: 2rem;
   font-weight: 700;
@@ -1109,7 +1128,7 @@ img {
   display: flex;
   align-items: center;
   gap: 1rem;
-  background: linear-gradient(to right, #737373, #a3a3a3);
+  background: linear-gradient(135deg, var(--brown-light), var(--warm-light));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -1118,7 +1137,7 @@ img {
 }
 
 .category-title i {
-  color: var(--dark-accent);
+  color: var(--brown-primary);
   font-size: 1.5rem;
 }
 
@@ -1129,13 +1148,12 @@ img {
   margin-bottom: 2rem;
 }
 
-/* Updated project cards with dark backgrounds */
 .project-card {
-  background-color: var(--card);
+  background: linear-gradient(135deg, rgba(26, 20, 16, 0.9) 0%, rgba(45, 36, 22, 0.8) 100%);
   border-radius: var(--radius);
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
-  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s ease;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -1150,13 +1168,14 @@ img {
   left: 0;
   width: 100%;
   height: 4px;
-  background: linear-gradient(to right, #2d2d2d, #404040);
+  background: linear-gradient(90deg, var(--brown-primary), var(--warm-accent));
 }
 
+/* Professional hover effect for project card */
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
-  border-color: rgba(64, 64, 64, 0.4);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7), 0 0 20px rgba(139, 111, 71, 0.2);
+  border-color: rgba(139, 111, 71, 0.4);
 }
 
 .project-image {
@@ -1169,22 +1188,22 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s;
+  transition: transform 0.5s ease;
 }
 
 .project-card:hover .project-image img {
-  transform: scale(1.1);
+  transform: scale(1.15);
 }
 
 .project-overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.8);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(26, 20, 16, 0.9) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transition: opacity 0.3s;
+  transition: opacity 0.4s ease;
 }
 
 .project-card:hover .project-overlay {
@@ -1209,7 +1228,7 @@ img {
   font-size: 0.75rem;
   color: var(--muted-foreground);
   padding: 0.25rem 0.75rem;
-  background: rgba(38, 38, 38, 0.8);
+  background: rgba(139, 111, 71, 0.2);
   border-radius: 2rem;
   border: 1px solid var(--border);
 }
@@ -1218,15 +1237,14 @@ img {
   display: flex;
   gap: 0.25rem;
   font-size: 0.75rem;
-  color: #737373;
+  color: #c89553;
 }
 
-/* Updated project title with dark gradient */
 .project-title {
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
-  background: linear-gradient(to right, #737373, #a3a3a3);
+  background: linear-gradient(135deg, var(--brown-light), var(--warm-light));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -1256,13 +1274,13 @@ img {
 /* ===================================
    CONTACT SECTION
    =================================== */
-/* Updated contact section with dark background */
 .contact {
-  background-color: #0d0d0d;
+  background: linear-gradient(180deg, var(--black-light) 0%, var(--black-medium) 100%);
   position: relative;
   overflow: hidden;
 }
 
+/* Dark brown gradient overlay effects */
 .contact::before {
   content: "";
   position: absolute;
@@ -1270,8 +1288,8 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at 20% 30%, rgba(45, 45, 45, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 70%, rgba(38, 38, 38, 0.1) 0%, transparent 50%);
+  background: radial-gradient(circle at 20% 30%, rgba(139, 111, 71, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(200, 149, 83, 0.08) 0%, transparent 50%);
   z-index: 0;
 }
 
@@ -1283,12 +1301,11 @@ img {
   z-index: 1;
 }
 
-/* Updated contact heading with dark gradient */
 .contact-info h3 {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  background: linear-gradient(to right, #737373, #a3a3a3);
+  background: linear-gradient(135deg, var(--brown-light), var(--warm-light));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -1308,19 +1325,33 @@ img {
 .info-item {
   display: flex;
   gap: 1rem;
+  transition: all 0.3s ease;
 }
 
-/* Updated info icon with dark background */
+/* Professional hover effect for info item */
+.info-item:hover {
+  transform: translateX(5px);
+}
+
 .info-icon {
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-  background: rgba(45, 45, 45, 0.4);
+  background: rgba(139, 111, 71, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-secondary);
+  color: var(--brown-light);
   font-size: 1.25rem;
+  transition: all 0.4s ease;
+}
+
+/* Professional hover effect for info icon */
+.info-item:hover .info-icon {
+  background: linear-gradient(135deg, var(--brown-primary), var(--warm-accent));
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(139, 111, 71, 0.4);
 }
 
 .info-content h4 {
@@ -1335,12 +1366,11 @@ img {
   margin-bottom: 0;
 }
 
-/* Updated contact form with dark backgrounds */
 .contact-form {
-  background-color: var(--card);
+  background: linear-gradient(135deg, rgba(26, 20, 16, 0.9) 0%, rgba(45, 36, 22, 0.8) 100%);
   border-radius: var(--radius);
   padding: 2rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
   border: 1px solid var(--border);
   position: relative;
   overflow: hidden;
@@ -1353,7 +1383,7 @@ img {
   left: 0;
   width: 100%;
   height: 4px;
-  background: linear-gradient(to right, #2d2d2d, #404040);
+  background: linear-gradient(90deg, var(--brown-primary), var(--warm-accent));
 }
 
 .form-group {
@@ -1373,32 +1403,38 @@ img {
   padding: 0.75rem 1rem;
   border-radius: var(--radius);
   border: 1px solid var(--border);
-  background-color: var(--charcoal);
+  background-color: var(--black-medium);
   color: var(--foreground);
   font-size: 1rem;
-  transition: all 0.3s;
+  transition: all 0.4s ease;
 }
 
-/* Updated form input focus with dark accent */
+/* Professional hover and focus effects for form inputs */
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: var(--dark-accent);
-  box-shadow: 0 0 0 2px rgba(64, 64, 64, 0.2);
+  border-color: var(--brown-primary);
+  box-shadow: 0 0 0 3px rgba(139, 111, 71, 0.2);
+  background-color: var(--black-light);
+}
+
+.form-group input:hover,
+.form-group textarea:hover {
+  border-color: rgba(139, 111, 71, 0.4);
 }
 
 /* ===================================
    FOOTER SECTION
    =================================== */
-/* Updated footer with pure black background */
 .footer {
-  background-color: #000000;
+  background: linear-gradient(180deg, var(--black-dark) 0%, var(--black-primary) 100%);
   padding: 4rem 0 2rem;
   border-top: 1px solid var(--border);
   position: relative;
   overflow: hidden;
 }
 
+/* Dark brown gradient overlay effects */
 .footer::before {
   content: "";
   position: absolute;
@@ -1406,8 +1442,8 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at 20% 30%, rgba(45, 45, 45, 0.05) 0%, transparent 50%),
-    radial-gradient(circle at 80% 70%, rgba(38, 38, 38, 0.05) 0%, transparent 50%);
+  background: radial-gradient(circle at 20% 30%, rgba(139, 111, 71, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(200, 149, 83, 0.05) 0%, transparent 50%);
   z-index: 0;
 }
 
@@ -1424,12 +1460,11 @@ img {
   max-width: 25rem;
 }
 
-/* Updated footer logo with dark gradient */
 .footer-logo {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  background: linear-gradient(to right, #737373, #a3a3a3);
+  background: linear-gradient(135deg, var(--brown-light), var(--warm-light));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -1445,34 +1480,34 @@ img {
   gap: 1rem;
 }
 
-/* Updated footer social icons with dark backgrounds */
 .social-icon {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
-  background: rgba(45, 45, 45, 0.4);
+  background: rgba(139, 111, 71, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-secondary);
-  transition: all 0.3s;
-  border: 1px solid rgba(64, 64, 64, 0.3);
+  color: var(--brown-light);
+  transition: all 0.4s ease;
+  border: 1px solid rgba(139, 111, 71, 0.3);
 }
 
+/* Professional hover effect for social icon */
 .social-icon:hover {
-  background: linear-gradient(to right, #2d2d2d, #404040);
+  background: linear-gradient(135deg, var(--brown-primary), var(--warm-accent));
   color: var(--primary-foreground);
-  transform: translateY(-3px);
+  transform: translateY(-5px) scale(1.1);
   border-color: transparent;
+  box-shadow: 0 8px 20px rgba(139, 111, 71, 0.4);
 }
 
-/* Updated footer headings with dark gradient */
 .footer-links h3,
 .footer-newsletter h3 {
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
-  background: linear-gradient(to right, #737373, #a3a3a3);
+  background: linear-gradient(135deg, var(--brown-light), var(--warm-light));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -1486,11 +1521,13 @@ img {
 
 .footer-links ul li a {
   color: var(--muted-foreground);
-  transition: color 0.3s;
+  transition: all 0.3s ease;
 }
 
+/* Professional hover effect for footer links */
 .footer-links ul li a:hover {
-  color: var(--text-secondary);
+  color: var(--warm-accent);
+  padding-left: 5px;
 }
 
 .footer-newsletter p {
@@ -1539,7 +1576,6 @@ img {
   color: var(--muted-foreground);
 }
 
-/* Updated back to top button with dark gradient */
 .back-to-top a {
   display: flex;
   align-items: center;
@@ -1547,14 +1583,15 @@ img {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
-  background: linear-gradient(to right, #2d2d2d, #404040);
+  background: linear-gradient(135deg, var(--brown-primary), var(--warm-accent));
   color: var(--primary-foreground);
-  transition: all 0.3s;
+  transition: all 0.4s ease;
 }
 
+/* Professional hover effect for back to top */
 .back-to-top a:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(45, 45, 45, 0.5);
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 8px 20px rgba(139, 111, 71, 0.5);
 }
 
 /* ===================================
@@ -1738,20 +1775,20 @@ img {
 /* ===================================
    CUSTOM SCROLLBAR
    =================================== */
-/* Updated scrollbar with dark colors */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0d0d0d;
+  background: var(--black-medium);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #404040;
+  background: var(--brown-muted);
   border-radius: 5px;
 }
 
+/* Professional hover effect for scrollbar */
 ::-webkit-scrollbar-thumb:hover {
-  background: #4d4d4d;
+  background: var(--brown-primary);
 }
