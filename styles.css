@@ -530,6 +530,7 @@ img {
    BUTTON STYLES
    =================================== */
 .btn {
+   gap:8px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
